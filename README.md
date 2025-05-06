@@ -28,7 +28,7 @@ src/main
 │   ├── model/             # Clases de dominio
 │   └── utils/             # Utilidades y excepciones
 └── resources/             # Archivos de configuración y scripts SQL
-
+```
 ---
 
 ## ⚙️ Configuración y ejecución
