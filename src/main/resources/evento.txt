@@ -1,0 +1,4 @@
+id,nombre,númeroEntradas,fecha,hora,ubicación,tipo
+1,Concierto Rock,200,2025-06-21,20:00,Madrid,Concierto
+2,Obra Teatro,100,2025-07-10,19:30,Barcelona,Teatro
+3,Conferencia IA,150,2025-08-05,10:00,Valencia,Conferencia
