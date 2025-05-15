@@ -9,20 +9,18 @@ public class Usuario {
     private String correo;
     private String contrasena;
     private String dni;
-    private Rol rol;
-
-    public enum Rol {
-        USUARIO, ORGANIZADOR, SOPORTE
-    }
+    private String tipo; // Cambiado de Rol a String
+    private float cartera;
 
     // Constructor
-    public Usuario(String nombre, String apellido, String correo, String contrasena, String dni, Rol rol) {
+    public Usuario(String nombre, String apellido, String correo, String contrasena, String dni, String tipo, float cartera) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.contrasena = contrasena;
         this.dni = dni;
-        this.rol = rol;
+        this.tipo = tipo;
+        this.cartera = cartera;
     }
 
     // Getters y Setters
@@ -74,25 +72,30 @@ public class Usuario {
         this.dni = dni;
     }
 
-    public Rol getRol() {
-        return rol;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setRol(Rol rol) {
-        this.rol = rol;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
+    public float getCartera() {
+        return cartera;
+    }
+
+    public void setCartera(float cartera) {
+        this.cartera = cartera;
+    }
 
     // Validación básica del DNI español (8 dígitos + letra)
     public static boolean esDniValido(String dni) {
-        // La expresión regular valida tiene que tener 8 dígitos y debe tener una letra mayuscula
         return dni != null && dni.matches("^[0-9]{8}[A-Z]$");
     }
 
     // Validación general de correo electrónico
     public static boolean esCorreoValido(String correo) {
         if (correo == null) return false;
-        // Debe comenzar con una combinacion de cualquier tipo debe tener un @ y varios caracteres y finalmente acabar con un .com 
         String regex = "^[\\w.-]+@[\\w.-]+\\.[A-Za-z]{2,}$";
         return Pattern.matches(regex, correo);
     }
@@ -100,8 +103,20 @@ public class Usuario {
     // Validación de contraseña segura: mínimo 8 caracteres, al menos una mayúscula, una minúscula y un número
     public static boolean esContrasenaSegura(String contrasena) {
         if (contrasena == null) return false;
-        // Debe tener una letra minuscula, mayuscula, tener un número y 8 caracteres
         return contrasena.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$");
     }
-}
 
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", contrasena='" + contrasena + '\'' +
+                ", correo='" + correo + '\'' +
+                ", dni='" + dni + '\'' +
+                ", tipo='" + tipo + '\'' +
+                ", cartera=" + cartera +
+                '}';
+    }
+}
