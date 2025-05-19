@@ -38,8 +38,8 @@ public class UsuarioDAO {
                 if (datos.length == 7) {
                     String nombre = datos[0].trim();
                     String apellido = datos[1].trim();
-                    String correo = datos[2].trim();
-                    String contrasena = datos[3].trim();
+                    String contrasena = datos[2].trim(); // antes era el correo
+                    String correo = datos[3].trim();     // ahora sí es el correo correcto
                     String dni = datos[4].trim();
                     String tipo = datos[5].trim();
                     float cartera = Float.parseFloat(datos[6].trim());
@@ -65,15 +65,16 @@ public class UsuarioDAO {
      */
     public Usuario buscarUsuarioPorCorreo(String correo) {
         List<Usuario> usuarios = obtenerUsuarios();
-
+    
         for (Usuario usuario : usuarios) {
-            if (usuario.getCorreo().equalsIgnoreCase(correo)) {
+            if (usuario.getCorreo().equalsIgnoreCase(correo.trim())) {
                 return usuario;
             }
         }
-
+    
         return null;
     }
+    
 
     /**
      * Guarda un nuevo usuario en el archivo.
@@ -218,4 +219,17 @@ public class UsuarioDAO {
         }
         return null;
     }
+
+    public Usuario buscarUsuarioPorDni(String dni) {
+        List<Usuario> usuarios = obtenerUsuarios();
+    
+        for (Usuario usuario : usuarios) {
+            if (usuario.getDni().equalsIgnoreCase(dni.trim())) {
+                return usuario;
+            }
+        }
+    
+        return null;
+    }
+    
 }

@@ -38,51 +38,109 @@ public class Main {
             scanner.nextLine(); // Consumir el salto de línea
     
             if (opcion < 1 || opcion > 4) {
+                System.out.print("\033[H\033[2J");  
+                System.out.flush(); 
                 System.out.println("Opción no válida. Por favor, ingrese un número entre 1 y 4.\n");
                 continue; // Volver al inicio del bucle
             }
     
             switch (opcion) {
                 case 1:
-                    // Registrar un nuevo usuario
-                    System.out.println("\n--- Registro de Usuario ---");
+                // Registrar un nuevo usuario
+                System.out.print("\033[H\033[2J");  
+                System.out.flush(); 
+                System.out.println("\n--- Registro de Usuario ---");
+            
+                // Validar nombre
+                String nombre = "";
+                while (true) {
                     System.out.print("Nombre: ");
-                    String nombre = scanner.nextLine();
+                    nombre = scanner.nextLine().trim();
+                    if (!nombre.isEmpty()) break;
+                    System.out.println("El nombre no puede estar vacío.");
+                }
+            
+                // Validar apellido
+                String apellido = "";
+                while (true) {
                     System.out.print("Apellido: ");
-                    String apellido = scanner.nextLine();
+                    apellido = scanner.nextLine().trim();
+                    if (!apellido.isEmpty()) break;
+                    System.out.println("El apellido no puede estar vacío.");
+                }
+            
+                // Validar correo
+                String correo = "";
+                while (true) {
                     System.out.print("Correo: ");
-                    String correo = scanner.nextLine();
+                    correo = scanner.nextLine().trim();
+                    if (correo.matches("^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$")) break;
+                    System.out.println("Correo inválido. Debe tener el formato correcto (ej: nombre@dominio.com).");
+                }
+            
+                // Validar contraseña
+                String contrasena = "";
+                while (true) {
                     System.out.print("Contraseña: ");
-                    String contrasena = scanner.nextLine();
+                    contrasena = scanner.nextLine();
+                    if (!contrasena.trim().isEmpty()) break;
+                    System.out.println("La contraseña no puede estar vacía.");
+                }
+            
+                // Validar DNI: formato 8 dígitos + letra (ej. 12345678A o 12345678a)
+                String dni = "";
+                while (true) {
                     System.out.print("DNI: ");
-                    String dni = scanner.nextLine();
+                    dni = scanner.nextLine().trim().toUpperCase();
+                    if (dni.matches("^[0-9]{8}[A-Za-z]$")) break;
+                    System.out.println("DNI inválido. Debe tener 8 números seguidos de una letra (ej: 12345678A).");
+                }
+            
+                // Validar rol
+                String rol = "";
+                while (true) {
                     System.out.print("Rol (USUARIO, ORGANIZADOR, SOPORTE): ");
-                    String rol = scanner.nextLine().toUpperCase(); // Leer el rol como String y convertir a mayúsculas
-    
-                    // Validar entrada para la cartera
+                    rol = scanner.nextLine().trim().toUpperCase();
+                    if (rol.equals("USUARIO") || rol.equals("ORGANIZADOR") || rol.equals("SOPORTE")) break;
+                    System.out.println("Rol inválido. Debe ser USUARIO, ORGANIZADOR o SOPORTE.");
+                }
+            
+                // Validar cartera
+                float cartera = 0.0f;
+                while (true) {
                     System.out.print("Cartera: ");
-                    float cartera = 0.0f;
-                    boolean entradaValida = false;
-    
-                    while (!entradaValida) {
-                        try {
-                            cartera = Float.parseFloat(scanner.nextLine().trim()); // Leer como cadena y convertir a float
-                            entradaValida = true; // Salir del bucle si la conversión es exitosa
-                        } catch (NumberFormatException e) {
-                            System.out.println("Entrada no válida. Por favor, ingrese un número válido para la cartera.\n");
-                        }
+                    String entrada = scanner.nextLine().trim();
+                    if (entrada.isEmpty()) {
+                        System.out.println("La cartera no puede estar vacía.");
+                        continue;
                     }
-    
-                    Usuario nuevoUsuario = new Usuario(nombre, apellido, correo, contrasena, dni, rol, cartera);
-                    boolean registrado = usuarioController.registrarUsuario(nuevoUsuario);
-                    if (registrado) {
-                        System.out.println("Usuario registrado correctamente.");
-                    } else {
-                        System.out.println("Error al registrar el usuario.");
+                    try {
+                        cartera = Float.parseFloat(entrada);
+                        break;
+                    } catch (NumberFormatException e) {
+                        System.out.println("Entrada no válida. Por favor, ingrese un número válido para la cartera.");
                     }
-                    break;
-    
+                }
+            
+                Usuario nuevoUsuario = new Usuario(nombre, apellido, contrasena, correo, dni, rol, cartera);
+                boolean registrado = usuarioController.registrarUsuario(nuevoUsuario);
+            
+            
+                if (registrado) {
+                    System.out.print("\033[H\033[2J");  
+                    System.out.flush(); 
+                    System.out.println("Usuario registrado correctamente.");
+                } else {
+                    System.out.print("\033[H\033[2J");  
+                    System.out.flush(); 
+                    System.out.println("Error al registrar el usuario.");
+                }
+                break;
+            
+            
                 case 2:
+                    System.out.print("\033[H\033[2J");  
+                    System.out.flush(); 
                     System.out.println("\n--- Inicio de Sesión ---");
                     System.out.print("Correo: ");
                     String correoLogin = scanner.nextLine();
@@ -139,11 +197,14 @@ public class Main {
         int opcionUsuario;
 
         do {
+            System.out.print("\033[H\033[2J");  
+            System.out.flush(); 
             System.out.println("\n--- Menú Usuario ---");
             System.out.println("1. Ver eventos disponibles");
             System.out.println("2. Comprar entradas");
             System.out.println("3. Comprar entradas de otro usuario");
             System.out.println("4. Ver entradas compradas");
+            System.out.println("5. Salir");
             System.out.print("Seleccione una opción: ");
 
             opcionUsuario = scanner.nextInt();
@@ -167,6 +228,8 @@ public class Main {
                     entradaController.imprimirEntradasDeUsuario(usuarioActual.getNombre());
                     break;
                 case 5:
+                    System.out.print("\033[H\033[2J");  
+                    System.out.flush(); 
                     System.out.println("Saliendo del menú de usuario...");
                     break;
                 default:

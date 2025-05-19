@@ -52,30 +52,36 @@ public class UsuarioController {
  * @return true si el registro es exitoso, false en caso contrario.
  */
 public boolean registrarUsuario(Usuario nuevoUsuario) {
-    // Crear una instancia del DAO
     UsuarioDAO usuarioDAO = new UsuarioDAO();
 
     // Validar que el usuario no exista ya (por correo)
-    Usuario usuarioExistente = usuarioDAO.buscarUsuarioPorCorreo(nuevoUsuario.getCorreo());
-    if (usuarioExistente != null) {
+    Usuario usuarioExistenteCorreo = usuarioDAO.buscarUsuarioPorCorreo(nuevoUsuario.getCorreo());
+    if (usuarioExistenteCorreo != null) {
         System.out.println("Registro fallido. Ya existe un usuario con el correo: " + nuevoUsuario.getCorreo());
-        return false; // El usuario ya existe
+        return false;
+    }
+
+    // Validar que el usuario no exista ya (por DNI)
+    Usuario usuarioExistenteDni = usuarioDAO.buscarUsuarioPorDni(nuevoUsuario.getDni());
+    if (usuarioExistenteDni != null) {
+        System.out.println("Registro fallido. Ya existe un usuario con el DNI: " + nuevoUsuario.getDni());
+        return false;
     }
 
     // Validar que el DNI sea válido
     if (!Usuario.esDniValido(nuevoUsuario.getDni())) {
         System.out.println("Registro fallido. El DNI no es válido.");
-        return false; // DNI no válido
+        return false;
     }
 
-    // Intentar registrar el nuevo usuario
+    // Guardar usuario
     boolean registrado = usuarioDAO.guardarUsuario(nuevoUsuario);
     if (registrado) {
         System.out.println("Registro exitoso. Usuario registrado: " + nuevoUsuario.toString());
-        return true; // Registro exitoso
+        return true;
     } else {
         System.out.println("Registro fallido. No se pudo guardar el usuario.");
-        return false; // Fallo al registrar
+        return false;
     }
 }
     /**
