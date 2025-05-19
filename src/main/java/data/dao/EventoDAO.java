@@ -8,13 +8,21 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase DAO (Data Access Object) para manejar operaciones de lectura y escritura de eventos
+ * en un archivo de texto plano.
+ * 
+ * Los eventos están almacenados en formato CSV en la ruta especificada.
+ */
 public class EventoDAO {
 
     private static final String RUTA_ARCHIVO = "src/main/resources/evento.txt";
     private static final String CABECERA = "id,nombre,númeroEntradas,fecha,hora,ubicación,tipo";
 
     /**
-     * Devuelve todos los eventos leídos del archivo.
+     * Lee todos los eventos del archivo y los devuelve como una lista de objetos EventoDTO.
+     *
+     * @return Lista de todos los eventos leídos del archivo.
      */
     public List<EventoDTO> obtenerTodos() {
         List<EventoDTO> eventos = new ArrayList<>();
@@ -26,7 +34,7 @@ public class EventoDAO {
             while ((linea = reader.readLine()) != null) {
                 if (primeraLinea) {
                     primeraLinea = false;
-                    continue;
+                    continue; // Saltar la cabecera
                 }
 
                 String[] partes = linea.split(",", -1);
@@ -52,7 +60,10 @@ public class EventoDAO {
     }
 
     /**
-     * Busca un evento por su ID.
+     * Busca y devuelve un evento según su identificador único.
+     *
+     * @param id ID del evento a buscar.
+     * @return EventoDTO correspondiente si se encuentra, o null si no existe.
      */
     public EventoDTO obtenerPorId(int id) {
         return obtenerTodos()
@@ -64,6 +75,8 @@ public class EventoDAO {
 
     /**
      * Guarda un nuevo evento añadiéndolo al final del archivo.
+     *
+     * @param nuevoEvento Evento a guardar.
      */
     public void guardarEvento(EventoDTO nuevoEvento) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(RUTA_ARCHIVO, true))) {
@@ -75,7 +88,10 @@ public class EventoDAO {
     }
 
     /**
-     * Reemplaza un evento existente con el mismo ID.
+     * Actualiza un evento existente (por ID) en el archivo.
+     * Si no se encuentra el evento, no se realiza ninguna acción.
+     *
+     * @param eventoActualizado Evento con los nuevos datos.
      */
     public void actualizarEvento(EventoDTO eventoActualizado) {
         List<EventoDTO> eventos = obtenerTodos();
@@ -97,7 +113,10 @@ public class EventoDAO {
     }
 
     /**
-     * Elimina un evento por ID.
+     * Elimina un evento del archivo según su ID.
+     *
+     * @param id ID del evento a eliminar.
+     * @return true si el evento fue eliminado, false si no se encontró.
      */
     public boolean eliminarEvento(int id) {
         List<EventoDTO> eventos = obtenerTodos();
@@ -109,7 +128,9 @@ public class EventoDAO {
     }
 
     /**
-     * Escribe todos los eventos al archivo, sobrescribiendo el contenido.
+     * Escribe todos los eventos proporcionados en el archivo, sobrescribiendo su contenido.
+     *
+     * @param eventos Lista de eventos a escribir.
      */
     private void sobrescribirArchivo(List<EventoDTO> eventos) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(RUTA_ARCHIVO))) {
@@ -124,7 +145,10 @@ public class EventoDAO {
     }
 
     /**
-     * Convierte un EventoDTO a formato CSV.
+     * Convierte un objeto EventoDTO a su representación en formato CSV.
+     *
+     * @param e Evento a formatear.
+     * @return Cadena en formato CSV representando al evento.
      */
     private String formatearEvento(EventoDTO e) {
         return String.join(",",

@@ -6,14 +6,24 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Clase DAO (Data Access Object) responsable de guardar la información de pagos
+ * en un archivo de texto plano.
+ * 
+ * Cada pago se guarda en una línea del archivo en formato CSV.
+ */
 public class PagoDAO {
 
+    /**
+     * Ruta del archivo donde se almacenan los datos de pago.
+     */
     private final String filePath = "./src/main/resources/pago.txt";
 
     /**
-     * Método para guardar los datos de la tarjeta en el archivo.
-     * @param pago El objeto Pago con los datos a guardar.
-     * @return true si los datos se guardan correctamente, false en caso contrario.
+     * Guarda los datos de una tarjeta en el archivo de pagos.
+     *
+     * @param pago El objeto {@link Pago} que contiene los datos de la tarjeta a guardar.
+     * @return {@code true} si los datos se guardan correctamente, {@code false} en caso de error.
      */
     public boolean guardarTarjeta(Pago pago) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath, true))) {

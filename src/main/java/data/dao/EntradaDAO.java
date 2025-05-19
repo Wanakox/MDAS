@@ -6,16 +6,25 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase DAO (Data Access Object) para gestionar las operaciones CRUD
+ * sobre las entradas almacenadas en un archivo de texto.
+ */
 public class EntradaDAO {
     private static final String FILE_PATH = "src/main/resources/entrada.txt";
 
+    /**
+     * Busca una entrada por su ID.
+     * 
+     * @param idBuscado El ID de la entrada a buscar.
+     * @return La entrada encontrada o null si no existe.
+     */
     public Entrada buscarPorId(int idBuscado) {
         try (BufferedReader br = new BufferedReader(new FileReader(FILE_PATH))) {
             String linea;
 
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(",");
-
                 int id = Integer.parseInt(partes[0]);
 
                 if (id == idBuscado) {
@@ -29,12 +38,18 @@ public class EntradaDAO {
                 }
             }
         } catch (IOException | NumberFormatException e) {
-            e.printStackTrace(); // O usa un logger
+            e.printStackTrace();
         }
 
-        return null; // No encontrada
+        return null;
     }
 
+    /**
+     * Elimina una entrada del archivo por su ID.
+     * 
+     * @param idABorrar El ID de la entrada a eliminar.
+     * @return true si se elimina correctamente, false si ocurre un error.
+     */
     public boolean borrarPorId(int idABorrar) {
         List<String> nuevasLineas = new ArrayList<>();
 
@@ -43,11 +58,10 @@ public class EntradaDAO {
 
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(",");
-
                 int id = Integer.parseInt(partes[0]);
 
                 if (id != idABorrar) {
-                    nuevasLineas.add(linea); // solo añadimos las que no queremos borrar
+                    nuevasLineas.add(linea);
                 }
             }
         } catch (IOException | NumberFormatException e) {
@@ -55,7 +69,6 @@ public class EntradaDAO {
             return false;
         }
 
-        // Escribimos las líneas restantes de nuevo en el archivo
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(FILE_PATH, false))) {
             for (String nuevaLinea : nuevasLineas) {
                 bw.write(nuevaLinea);
@@ -66,9 +79,15 @@ public class EntradaDAO {
             return false;
         }
 
-        return true; // Borrado con éxito
+        return true;
     }
 
+    /**
+     * Crea una nueva entrada y la agrega al archivo.
+     * 
+     * @param nuevaEntrada La entrada a crear.
+     * @return true si se crea correctamente, false si ocurre un error.
+     */
     public boolean crearEntrada(Entrada nuevaEntrada) {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(FILE_PATH, true))) {
             String linea = nuevaEntrada.getId() + "," +
@@ -88,6 +107,12 @@ public class EntradaDAO {
         return true;
     }
 
+    /**
+     * Actualiza los datos de una entrada existente.
+     * 
+     * @param entradaActualizada La entrada con la información actualizada.
+     * @return true si se actualiza correctamente, false si no se encuentra o falla.
+     */
     public boolean actualizarEntrada(Entrada entradaActualizada) {
         File archivoOriginal = new File(FILE_PATH);
         File archivoTemporal = new File("resources/entrada_temp.txt");
@@ -103,7 +128,6 @@ public class EntradaDAO {
                 int id = Integer.parseInt(partes[0]);
 
                 if (id == entradaActualizada.getId()) {
-                    // Escribimos la entrada actualizada
                     String nuevaLinea = entradaActualizada.getId() + "," +
                             entradaActualizada.getPrecio() + "," +
                             entradaActualizada.getAsiento() + "," +
@@ -113,7 +137,6 @@ public class EntradaDAO {
                     bw.write(nuevaLinea);
                     actualizada = true;
                 } else {
-                    // Copiamos la línea original
                     bw.write(linea);
                 }
                 bw.newLine();
@@ -123,7 +146,6 @@ public class EntradaDAO {
             return false;
         }
 
-        // Reemplazar el archivo original con el temporal
         if (actualizada) {
             archivoOriginal.delete();
             archivoTemporal.renameTo(archivoOriginal);
@@ -132,47 +154,55 @@ public class EntradaDAO {
         return actualizada;
     }
 
+    /**
+     * Busca todas las entradas asociadas a un poseedor.
+     * 
+     * @param poseedorBuscado El nombre del poseedor.
+     * @return Lista de entradas del poseedor.
+     */
     public List<Entrada> buscarPorPoseedor(String poseedorBuscado) {
         List<Entrada> entradas = new ArrayList<>();
-    
         try (BufferedReader br = new BufferedReader(new FileReader(FILE_PATH))) {
             String linea;
             boolean primeraLinea = true;
-            int contadorId = 1; // ID autogenerado
-    
+            int contadorId = 1;
+
             while ((linea = br.readLine()) != null) {
                 if (primeraLinea) {
-                    primeraLinea = false; // Saltar cabecera
+                    primeraLinea = false;
                     continue;
                 }
-    
+
                 String[] partes = linea.split(",");
-    
+
                 if (partes.length < 5) {
                     System.err.println("Línea mal formateada: " + linea);
                     continue;
                 }
-    
+
                 String poseedor = partes[2].trim();
                 if (poseedor.equalsIgnoreCase(poseedorBuscado.trim())) {
                     float precio = Float.parseFloat(partes[0]);
                     String asiento = partes[1];
                     String tipo = partes[3];
                     int idEvento = Integer.parseInt(partes[4]);
-    
+
                     entradas.add(new Entrada(contadorId++, precio, asiento, poseedor, tipo, idEvento));
                 }
             }
         } catch (IOException | NumberFormatException e) {
             e.printStackTrace();
         }
-    
+
         return entradas;
     }
-    
 
-
-
+    /**
+     * Busca todas las entradas asociadas a un evento.
+     * 
+     * @param idEventoBuscado El ID del evento.
+     * @return Lista de entradas del evento.
+     */
     public List<Entrada> buscarPorEvento(int idEventoBuscado) {
         List<Entrada> entradas = new ArrayList<>();
 
@@ -200,22 +230,21 @@ public class EntradaDAO {
     }
 
     /**
-     * Método para comprobar si existe una entrada asociada al usuario y al monto especificado.
-     * @param nombreUsuario El nombre del usuario.
-     * @param cantidad El monto de la entrada.
-     * @return true si se encuentra la entrada, false en caso contrario.
+     * Comprueba si existe una entrada con un nombre de usuario y una cantidad específica.
+     * 
+     * @param nombreUsuario Nombre del usuario.
+     * @param cantidad Monto de la entrada.
+     * @return true si se encuentra una entrada coincidente, false en caso contrario.
      */
     public boolean comprobarEntrada(String nombreUsuario, double cantidad) {
         try (BufferedReader br = new BufferedReader(new FileReader(FILE_PATH))) {
             String linea;
 
-            // Leer el archivo línea por línea
             while ((linea = br.readLine()) != null) {
-                String[] datos = linea.split(","); // Suponiendo que los datos están separados por comas
+                String[] datos = linea.split(",");
 
-                // Verificar si el nombre del usuario y el monto coinciden
                 if (datos[0].equalsIgnoreCase(nombreUsuario) && Double.parseDouble(datos[1]) == cantidad) {
-                    return true; // Entrada encontrada
+                    return true;
                 }
             }
         } catch (IOException e) {
@@ -224,11 +253,6 @@ public class EntradaDAO {
             System.err.println("Error al procesar el monto de la entrada: " + e.getMessage());
         }
 
-        return false; // Entrada no encontrada
+        return false;
     }
-
-
-
-
-
 }
