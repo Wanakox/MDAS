@@ -11,12 +11,23 @@ public class EventoController {
 
     private final EventoDAO eventoDAO;
 
+    /**
+     * Constructor que inicializa el DAO de eventos.
+     */
     public EventoController() {
         this.eventoDAO = new EventoDAO();
     }
 
     /**
      * Crea un nuevo evento si no existe un evento con el mismo ID.
+     * @param titulo Nombre del evento.
+     * @param id ID único del evento.
+     * @param numeroEntradas Cantidad de entradas disponibles.
+     * @param localizacion Ubicación del evento.
+     * @param tipoEvento Tipo del evento (validado).
+     * @param fecha Fecha del evento.
+     * @param hora Hora del evento.
+     * @return true si se crea correctamente, false si ya existe o hay error en el tipo.
      */
     public boolean crearEvento(String titulo, int id, int numeroEntradas,
             String localizacion, String tipoEvento, LocalDate fecha, LocalTime hora) {
@@ -47,11 +58,19 @@ public class EventoController {
 
     /**
      * Modifica un evento existente si se encuentra por ID.
+     * @param id ID del evento a modificar.
+     * @param titulo Nuevo nombre.
+     * @param numeroEntradas Nueva cantidad de entradas.
+     * @param localizacion Nueva ubicación.
+     * @param tipoEvento Nuevo tipo de evento.
+     * @param fecha Nueva fecha.
+     * @param hora Nueva hora.
+     * @return true si se modifica correctamente, false si no se encuentra o tipo inválido.
      */
     public boolean modificarEvento(int id, String titulo, int numeroEntradas,
     String localizacion, String tipoEvento, LocalDate fecha, LocalTime hora) {
 
-        EventoDTO existente = eventoDAO.obtenerPorId(id); // Buscar el evento real
+        EventoDTO existente = eventoDAO.obtenerPorId(id);
         if (existente == null) {
             System.out.println("No se encontró un evento con ID " + id);
             return false;
@@ -73,11 +92,12 @@ public class EventoController {
         eventoDAO.actualizarEvento(existente);
         System.out.println("Evento actualizado: " + titulo);
         return true;
-        }
-
+    }
 
     /**
      * Elimina un evento si existe por su ID.
+     * @param id ID del evento a eliminar.
+     * @return true si se elimina correctamente, false si no se encuentra.
      */
     public boolean cancelarEvento(int id) {
         boolean eliminado = eventoDAO.eliminarEvento(id);
@@ -92,6 +112,8 @@ public class EventoController {
 
     /**
      * Busca y muestra un evento por ID.
+     * @param id ID del evento a consultar.
+     * @return true si se encuentra, false si no existe.
      */
     public boolean obtenerEvento(int id) {
         EventoDTO evento = eventoDAO.obtenerPorId(id);
