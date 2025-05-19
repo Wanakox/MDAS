@@ -97,4 +97,18 @@ public boolean registrarUsuario(Usuario nuevoUsuario) {
             return false; // Fallo al eliminar
         }
     }
+
+    public Usuario iniciarSesionConUsuario(String correo, String contrasena) {
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+
+        Usuario usuario = usuarioDAO.buscarUsuarioPorCorreo(correo);
+
+        if (usuario != null && usuario.getContrasena().equals(contrasena)) {
+            System.out.println("Inicio de sesión exitoso. Tipo de usuario: " + usuario.getTipo());
+            return usuario; // Devuelve el usuario autenticado
+        }
+
+        System.out.println("Inicio de sesión fallido. Credenciales incorrectas.");
+        return null; // No autenticado
+    }
 }

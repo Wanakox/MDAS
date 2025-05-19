@@ -16,6 +16,10 @@ public class UsuarioDAO {
      * Método para obtener todos los usuarios desde un archivo.
      * @return Una lista de objetos Usuario.
      */
+
+    private final String filePath = "./src/main/resources/usuarios.txt";
+
+
     public List<Usuario> obtenerUsuarios() {
         List<Usuario> usuarios = new ArrayList<>();
         String filePath = "./src/main/resources/usuarios.txt"; // Cambia esta ruta según la ubicación de tu archivo
@@ -135,5 +139,80 @@ public class UsuarioDAO {
         }
 
         return usuarioEliminado; // Retornar true si el usuario fue eliminado, false si no se encontró
+    }
+        /**
+     * Método para obtener el saldo actual del usuario.
+     * @param correoUsuario El correo del usuario.
+     * @return El saldo actual del usuario.
+     */
+    public double obtenerSaldo(String correoUsuario) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String[] datos = linea.split(",");
+                if (datos[2].equalsIgnoreCase(correoUsuario)) { // Suponiendo que el correo está en la posición 2
+                    return Double.parseDouble(datos[6]); // Suponiendo que el saldo está en la posición 6
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Error al leer el archivo: " + e.getMessage());
+        }
+        return 0.0; // Retornar 0 si no se encuentra el usuario
+    }
+
+    /**
+     * Método para modificar el saldo del usuario en el archivo.
+     * @param correoUsuario El correo del usuario.
+     * @param saldoNuevo El nuevo saldo a establecer.
+     * @return true si el saldo se modifica correctamente, false en caso contrario.
+     */
+    public boolean modificarSaldo(String correoUsuario, double saldoNuevo) {
+        List<String> usuariosActualizados = new ArrayList<>();
+        boolean saldoModificado = false;
+
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            String linea;
+
+            // Leer el archivo línea por línea
+            while ((linea = br.readLine()) != null) {
+                String[] datos = linea.split(",");
+                if (datos[2].equalsIgnoreCase(correoUsuario)) { // Suponiendo que el correo está en la posición 2
+                    datos[6] = String.valueOf(saldoNuevo); // Actualizar el saldo (posición 6)
+                    saldoModificado = true;
+                }
+                usuariosActualizados.add(String.join(",", datos));
+            }
+        } catch (IOException e) {
+            System.err.println("Error al leer el archivo: " + e.getMessage());
+            return false;
+        }
+
+        // Sobrescribir el archivo con los datos actualizados
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
+            for (String usuario : usuariosActualizados) {
+                bw.write(usuario);
+                bw.newLine();
+            }
+        } catch (IOException e) {
+            System.err.println("Error al escribir en el archivo: " + e.getMessage());
+            return false;
+        }
+
+        return saldoModificado;
+    }
+
+    public String correoConseguirNombre(String correo) {
+        try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            String linea;
+            while ((linea = br.readLine()) != null) {
+                String[] datos = linea.split(","); // Suponiendo que los datos están separados por comas
+                if (datos[2].equalsIgnoreCase(correo)) { // Suponiendo que el correo está en la posición 2
+                    return datos[0]; // Suponiendo que el nombre está en la posición 0
+                }
+            }
+        } catch (IOException e) {
+            System.err.println("Error al leer el archivo: " + e.getMessage());
+        }
+        return null; // Retornar null si no se encuentra el usuario
     }
 }

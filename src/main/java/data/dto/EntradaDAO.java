@@ -1,7 +1,10 @@
-package main.java.data.dao;
+package main.java.data.dto;
 
 import main.java.model.Entrada;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -185,33 +188,6 @@ public class EntradaDAO {
         return entradas;
     }
 
-    /**
-     * Método para comprobar si existe una entrada asociada al usuario y al monto especificado.
-     * @param nombreUsuario El nombre del usuario.
-     * @param cantidad El monto de la entrada.
-     * @return true si se encuentra la entrada, false en caso contrario.
-     */
-    public boolean comprobarEntrada(String nombreUsuario, double cantidad) {
-        try (BufferedReader br = new BufferedReader(new FileReader(FILE_PATH))) {
-            String linea;
-
-            // Leer el archivo línea por línea
-            while ((linea = br.readLine()) != null) {
-                String[] datos = linea.split(","); // Suponiendo que los datos están separados por comas
-
-                // Verificar si el nombre del usuario y el monto coinciden
-                if (datos[0].equalsIgnoreCase(nombreUsuario) && Double.parseDouble(datos[1]) == cantidad) {
-                    return true; // Entrada encontrada
-                }
-            }
-        } catch (IOException e) {
-            System.err.println("Error al leer el archivo: " + e.getMessage());
-        } catch (NumberFormatException e) {
-            System.err.println("Error al procesar el monto de la entrada: " + e.getMessage());
-        }
-
-        return false; // Entrada no encontrada
-    }
 
 
 
