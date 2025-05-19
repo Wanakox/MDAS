@@ -6,12 +6,21 @@ import main.java.data.dao.EntradaDAO;
 import java.util.List;
 
 public class EntradaController {
+
     private EntradaDAO entradaDAO;
 
+    /**
+     * Constructor por defecto que inicializa el DAO de entradas.
+     */
     public EntradaController() {
         this.entradaDAO = new EntradaDAO();
     }
 
+    /**
+     * Método para imprimir todas las entradas asociadas a un usuario.
+     * 
+     * @param nombreUsuario El nombre del poseedor de las entradas.
+     */
     public void imprimirEntradasDeUsuario(String nombreUsuario) {
         List<Entrada> entradas = entradaDAO.buscarPorPoseedor(nombreUsuario);
 
@@ -28,8 +37,4 @@ public class EntradaController {
             }
         }
     }
-
-    
-
-
 }

@@ -3,7 +3,6 @@ package main.java.controller;
 import main.java.data.dao.EntradaDAO;
 import main.java.data.dao.PagoDAO;
 import main.java.data.dao.UsuarioDAO;
-
 import main.java.model.Pago;
 
 import java.time.LocalDate;
@@ -15,12 +14,13 @@ public class PagoController {
     private final UsuarioDAO usuarioDAO;
     private final EntradaDAO entradaDAO;
 
-
-    // Constructor
+    /**
+     * Constructor que inicializa los DAOs necesarios para la gestión de pagos.
+     */
     public PagoController() {
         this.pagoDAO = new PagoDAO();
-        this.usuarioDAO= new UsuarioDAO();
-        this.entradaDAO= new EntradaDAO();
+        this.usuarioDAO = new UsuarioDAO();
+        this.entradaDAO = new EntradaDAO();
     }
 
     /**
@@ -64,10 +64,8 @@ public class PagoController {
         System.out.print("Ingrese el CVV de la tarjeta: ");
         int cvv = Integer.parseInt(scanner.nextLine().trim());
 
-        // Crear un objeto Pago con los datos ingresados
         Pago pago = new Pago(LocalDate.now(), precio, titularTarjeta, numeroTarjeta, caducidadTarjeta, cvv);
 
-        // Guardar el pago en el fichero
         boolean guardado = pagoDAO.guardarTarjeta(pago);
         if (guardado) {
             System.out.println("Los datos de la tarjeta se han guardado correctamente.");
@@ -77,7 +75,6 @@ public class PagoController {
 
         return pago;
     }
-
 
     /**
      * Método para notificar el resultado del proceso de pago.
@@ -91,56 +88,60 @@ public class PagoController {
         }
     }
 
+    /**
+     * Método para recargar la cartera de un usuario.
+     * @param cantidad Monto a recargar.
+     * @param correoUsuario Correo del usuario.
+     */
     public void RecargarCartera(double cantidad, String correoUsuario) {
         if (cantidad <= 0) {
             System.out.println("La cantidad a recargar debe ser mayor a 0.");
             return;
         }
-        // Llamar al DAO para obtener el saldo actual del usuario
+
         double saldoActual = usuarioDAO.obtenerSaldo(correoUsuario);
-    
-        // Calcular el nuevo saldo
         double saldoNuevo = saldoActual + cantidad;
-    
-        // Llamar al DAO para modificar el saldo
+
         boolean actualizado = usuarioDAO.modificarSaldo(correoUsuario, saldoNuevo);
-    
+
         if (actualizado) {
             System.out.println("La recarga de la cartera se ha realizado correctamente. Nuevo saldo: " + saldoNuevo);
         } else {
             System.out.println("Hubo un error al recargar la cartera.");
         }
     }
+
+    /**
+     * Método para procesar un pago y descontar el saldo del usuario.
+     * @param correoUsuario Correo del usuario.
+     * @param cantidad Monto del pago.
+     */
     public void procesarPago(String correoUsuario, double cantidad) {
         if (cantidad <= 0) {
             System.out.println("El monto del pago debe ser mayor a 0.");
             return;
         }
-    
-        // Obtener el saldo actual del usuario
+
         double saldoActual = usuarioDAO.obtenerSaldo(correoUsuario);
-    
-        // Verificar si el usuario tiene suficiente saldo
+
         if (saldoActual < cantidad) {
             System.out.println("Saldo insuficiente para realizar el pago.");
             return;
         }
-    
-        // Descontar el dinero del saldo
+
         double saldoNuevo = saldoActual - cantidad;
-    
-        // Llamar al DAO para modificar el saldo del usuario
+
         boolean saldoActualizado = usuarioDAO.modificarSaldo(correoUsuario, saldoNuevo);
-    
+
         if (!saldoActualizado) {
             System.out.println("Hubo un error al actualizar el saldo del usuario.");
             return;
         }
-        
+
         String nombreUsuario = usuarioDAO.correoConseguirNombre(correoUsuario);
 
         boolean entradaComprada = entradaDAO.comprobarEntrada(nombreUsuario, cantidad);
-        
+
         if (entradaComprada) {
             System.out.println("El pago se ha procesado correctamente. Nuevo saldo: " + saldoNuevo);
         } else {
