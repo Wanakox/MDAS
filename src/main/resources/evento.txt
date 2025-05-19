@@ -1,0 +1,3 @@
+id,nombre,númeroEntradas,fecha,hora,ubicación,tipo
+1,Concierto Rock,200,2025-06-21,20:00,Madrid,Concierto
+2,Rey Leon,120,1234-12-12,12:12,UCO,Concierto

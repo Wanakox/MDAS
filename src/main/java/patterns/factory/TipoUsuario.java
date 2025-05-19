@@ -1,5 +1,7 @@
 package main.java.patterns.factory;
 
-public class TipoUsuario {
-    
+public enum TipoUsuario {
+    USUARIO,
+    ORGANIZADOR,
+    SOPORTE
 }

@@ -1,0 +1,4 @@
+precio,asiento,poseedor,tipo,idEvento
+49.99,A12,Alberto,Vip,1
+30.00,B7,Aitor,General,2
+15.75,C3,Luis Gómez,Descuento,3
