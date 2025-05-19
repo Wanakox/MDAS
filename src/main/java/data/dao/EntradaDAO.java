@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EntradaDAO {
-    private static final String FILE_PATH = "resources/entrada.txt";
+    private static final String FILE_PATH = "src/main/resources/entrada.txt";
 
     public Entrada buscarPorId(int idBuscado) {
         try (BufferedReader br = new BufferedReader(new FileReader(FILE_PATH))) {
@@ -134,28 +134,42 @@ public class EntradaDAO {
 
     public List<Entrada> buscarPorPoseedor(String poseedorBuscado) {
         List<Entrada> entradas = new ArrayList<>();
-
+    
         try (BufferedReader br = new BufferedReader(new FileReader(FILE_PATH))) {
             String linea;
+            boolean primeraLinea = true;
+            int contadorId = 1; // ID autogenerado
+    
             while ((linea = br.readLine()) != null) {
+                if (primeraLinea) {
+                    primeraLinea = false; // Saltar cabecera
+                    continue;
+                }
+    
                 String[] partes = linea.split(",");
-
-                if (partes[3].equalsIgnoreCase(poseedorBuscado)) {
-                    int id = Integer.parseInt(partes[0]);
-                    float precio = Float.parseFloat(partes[1]);
-                    String asiento = partes[2];
-                    String tipo = partes[4];
-                    int idEvento = Integer.parseInt(partes[5]);
-
-                    entradas.add(new Entrada(id, precio, asiento, poseedorBuscado, tipo, idEvento));
+    
+                if (partes.length < 5) {
+                    System.err.println("Línea mal formateada: " + linea);
+                    continue;
+                }
+    
+                String poseedor = partes[2].trim();
+                if (poseedor.equalsIgnoreCase(poseedorBuscado.trim())) {
+                    float precio = Float.parseFloat(partes[0]);
+                    String asiento = partes[1];
+                    String tipo = partes[3];
+                    int idEvento = Integer.parseInt(partes[4]);
+    
+                    entradas.add(new Entrada(contadorId++, precio, asiento, poseedor, tipo, idEvento));
                 }
             }
         } catch (IOException | NumberFormatException e) {
             e.printStackTrace();
         }
-
+    
         return entradas;
     }
+    
 
 
 

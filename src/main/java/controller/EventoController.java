@@ -48,11 +48,12 @@ public class EventoController {
     /**
      * Modifica un evento existente si se encuentra por ID.
      */
-    public boolean modificarEvento(String titulo, int id, int numeroEntradas,
-            String localizacion, String tipoEvento, LocalDate fecha, LocalTime hora) {
-        EventoDTO existente = eventoDAO.obtenerPorId(id);
+    public boolean modificarEvento(int id, String titulo, int numeroEntradas,
+    String localizacion, String tipoEvento, LocalDate fecha, LocalTime hora) {
+
+        EventoDTO existente = eventoDAO.obtenerPorId(id); // Buscar el evento real
         if (existente == null) {
-            System.out.println("Error: no se encontró el evento con ID " + id);
+            System.out.println("No se encontró un evento con ID " + id);
             return false;
         }
 
@@ -61,10 +62,10 @@ public class EventoController {
         existente.setFecha(fecha);
         existente.setHora(hora);
         existente.setUbicacion(localizacion);
+
         String tipoFormateado = validarYFormatearTipo(tipoEvento);
         if (tipoFormateado == null) {
-            System.out.println(
-                    "Tipo de evento no válido. Opciones válidas: Concierto, Festival, Obra de Teatro, Evento Deportivo.");
+            System.out.println("Tipo de evento no válido. Opciones válidas: Concierto, Festival, Obra de Teatro, Evento Deportivo.");
             return false;
         }
         existente.setTipo(tipoFormateado);
@@ -72,7 +73,8 @@ public class EventoController {
         eventoDAO.actualizarEvento(existente);
         System.out.println("Evento actualizado: " + titulo);
         return true;
-    }
+        }
+
 
     /**
      * Elimina un evento si existe por su ID.
@@ -140,4 +142,24 @@ public class EventoController {
         return null;
     }
 
+    /**
+     * Busca un evento por su ID y muestra su información si se encuentra.
+     * @param id El ID del evento a buscar.
+     * @return true si el evento se encuentra, false en caso contrario.
+     */
+    public boolean buscarEventoPorId(int id) {
+        EventoDTO evento = eventoDAO.obtenerPorId(id);
+        if (evento != null) {
+            System.out.println("Evento encontrado:");
+            System.out.println("Nombre: " + evento.getNombre());
+            System.out.println("Fecha: " + evento.getFecha() + " Hora: " + evento.getHora());
+            System.out.println("Ubicación: " + evento.getUbicacion());
+            System.out.println("Tipo: " + evento.getTipo());
+            System.out.println("Entradas disponibles: " + evento.getNumeroEntradas());
+            return true;
+        } else {
+            System.out.println("No se encontró un evento con el ID: " + id);
+            return false;
+        }
+    }
 }
