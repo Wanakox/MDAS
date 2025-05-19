@@ -1,0 +1,4 @@
+puntuación,usuarioEmisor,usuarioReceptor
+4.5,Juan,Pérez,Ana,Torres
+5.0,Ana,Torres,Luis,Gómez
+3.8,Luis,Gómez,Juan,Pérez

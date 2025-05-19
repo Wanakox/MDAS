@@ -5,3 +5,5 @@ Luis,Gómez,luis2025,luis@example.com,11223344C,USUARIO,25.75
 Angel,Moreno,i22mofea,123,26918367H,SOPORTE,0.0
 Aitor,Delatorre,i22aitor,1234aitor,26123445L,USUARIO,12.0
 Alberto,Bermejo,i22alberto,1234alber,23456780G,ORGANIZADOR,45.2
+Alberto,Bermejo,a,a,12345678P,USUARIO,1000.0
+a,a,a,a,a,USUARIO,1000.0

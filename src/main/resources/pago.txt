@@ -1,0 +1,4 @@
+fecha,precio,titularTarjeta,numeroTarjeta,caducidadTarjeta,CVV
+2025-05-01,49.99,Juan Pérez,1234567812345678,0527,123
+2025-05-10,30.00,Ana Torres,9876543298765432,0426,456
+2025-05-12,15.75,Luis Gómez,1111222233334444,0325,789

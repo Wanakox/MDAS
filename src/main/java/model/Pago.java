@@ -1,5 +1,6 @@
 package main.java.model;
 //ALBERTO
+//IRealizarPago
 
 import java.util.Date;
 
@@ -56,6 +57,15 @@ public class Pago {
     }
 
     public void setCVV(int CVV) {
+        this.CVV = CVV;
+    }
+
+    public Pago(Date fecha, float precio, String titularTarjeta, int numeroTarjeta, int caducidadTarjeta, int CVV) {
+        this.fecha = fecha;
+        this.precio = precio;
+        this.titularTarjeta = titularTarjeta;
+        this.numeroTarjeta = numeroTarjeta;
+        this.caducidadTarjeta = caducidadTarjeta;
         this.CVV = CVV;
     }
 }
