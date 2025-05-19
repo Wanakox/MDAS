@@ -29,16 +29,16 @@ public class Main {
     
             // Validar que la entrada sea un número entre 1 y 4
             while (!scanner.hasNextInt()) {
-                System.out.println("Entrada no válida. Por favor, ingrese un número entre 1 y 4.");
+                System.out.println("Entrada no válida. Por favor, ingrese un número entre 1 y 4.\n");
                 scanner.next(); // Consumir la entrada no válida
-                System.out.print("Seleccione una opción: ");
+                System.out.print("Seleccione una opción: \n");
             }
     
             opcion = scanner.nextInt();
             scanner.nextLine(); // Consumir el salto de línea
     
             if (opcion < 1 || opcion > 4) {
-                System.out.println("Opción no válida. Por favor, ingrese un número entre 1 y 4.");
+                System.out.println("Opción no válida. Por favor, ingrese un número entre 1 y 4.\n");
                 continue; // Volver al inicio del bucle
             }
     
@@ -69,7 +69,7 @@ public class Main {
                             cartera = Float.parseFloat(scanner.nextLine().trim()); // Leer como cadena y convertir a float
                             entradaValida = true; // Salir del bucle si la conversión es exitosa
                         } catch (NumberFormatException e) {
-                            System.out.println("Entrada no válida. Por favor, ingrese un número válido para la cartera.");
+                            System.out.println("Entrada no válida. Por favor, ingrese un número válido para la cartera.\n");
                         }
                     }
     
@@ -92,7 +92,7 @@ public class Main {
                     Usuario usuario = usuarioController.iniciarSesionConUsuario(correoLogin, contrasenaLogin);
                     if (usuario != null) {
                         usuarioActual = usuario;
-                        System.out.println("Inicio de sesión exitoso. Bienvenido " + usuario.getNombre() + "!");
+                        System.out.println("Inicio de sesión exitoso. Bienvenido " + usuario.getNombre() + "!\n");
     
                         switch (usuario.getTipo()) {
                             case "USUARIO":
@@ -105,11 +105,11 @@ public class Main {
                                 mostrarMenuSoporte();
                                 break;
                             default:
-                                System.out.println("Tipo de usuario no reconocido.");
+                                System.out.println("Tipo de usuario no reconocido.\n");
                                 break;
                         }
                     } else {
-                        System.out.println("Credenciales incorrectas.");
+                        System.out.println("Credenciales incorrectas.\n");
                     }
                     break;
     
@@ -121,11 +121,11 @@ public class Main {
     
                 case 4:
                     // Salir
-                    System.out.println("Saliendo del programa...");
+                    System.out.println("Saliendo del programa...\n");
                     break;
     
                 default:
-                    System.out.println("Opción no válida. Intente nuevamente.");
+                    System.out.println("Opción no válida. Intente nuevamente.\n");
             }
         } while (opcion != 4);
     
@@ -245,9 +245,9 @@ public class Main {
             // Llamada a la función
             boolean creado = eventoController.crearEvento(titulo, id, numeroEntradas, localizacion, tipoEvento, fecha, hora);
             if (creado) {
-                System.out.println("Evento"+ titulo +"creado correctamente.");
+                System.out.println("Evento "+ titulo +" creado correctamente.");
             } else {
-                System.out.println("No se pudo crear el evento"+ titulo +".");
+                System.out.println("No se pudo crear el evento "+ titulo +".");
             }
                     break;
                 case 2:
@@ -262,7 +262,7 @@ public class Main {
                     break;
                 }
                 
-                System.out.print("Título del evento: ");
+                System.out.print("\nTítulo del evento: ");
                 String titulo_editado = scanner.nextLine();
                 
                 System.out.print("Número de entradas: ");
