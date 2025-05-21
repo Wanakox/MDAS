@@ -3,6 +3,7 @@
 Este proyecto es una aplicación de consola desarrollada en Java para la **gestión de eventos**, compra de entradas, valoraciones y gestión de pagos y reembolsos. La persistencia de datos se realiza mediante archivos de texto planos y se sigue una arquitectura basada en **MVC + DAO + DTO**.
 
 Enlace al repositorio público creado para la práctica: https://github.com/Wanakox/MDAS
+Para acceder a la última versión accede a la rama develop porque hemos tenido un conflicto a la hora de subirlo a la main.
 
 ---
 
@@ -121,6 +122,11 @@ Además, el documento `Enunciado_Problema.pdf` describe el planteamiento origina
 
 ### Documentación del código
 Para poder ver todos los comentarios de nuestro código podemos acceder al directorio html para poder ejecutar el index.html y ver el doxygen.
+
+### Documentación Deepwiki
+También hemos incluido a través de este enlace otro tipo de documentación muy completa.
+https://deepwiki.com/Wanakox/MDAS
+
 ---
 
 ## 🛠️ Arquitectura y diseño
