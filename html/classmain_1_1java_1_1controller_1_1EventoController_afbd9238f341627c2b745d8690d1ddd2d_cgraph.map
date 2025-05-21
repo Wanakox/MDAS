@@ -1,0 +1,14 @@
+<map id="main.java.controller.EventoController.modificarEvento" name="main.java.controller.EventoController.modificarEvento">
+<area shape="rect" id="node1" title="Modifica un evento existente si se encuentra por ID." alt="" coords="5,199,207,240"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a79ed7f05dbc2cacea44fb94bce7329ec" title="Actualiza un evento existente (por ID) en el archivo." alt="" coords="255,165,452,207"/>
+<area shape="rect" id="node5" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#abd9ab19b0f4780dff5ff94eff65f54fb" title="Establece la fecha del evento." alt="" coords="745,5,940,47"/>
+<area shape="rect" id="node6" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a2b907e06a92045ab21072cfd6ab9c2f0" title="Establece la hora del evento." alt="" coords="745,71,940,112"/>
+<area shape="rect" id="node8" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ad0afbc3a50f608d3965060dcb15a5828" title="Establece el nombre del evento." alt="" coords="745,136,940,177"/>
+<area shape="rect" id="node9" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a86aab7dc711fe28005efb1f895952546" title="Establece el número de entradas disponibles para el evento." alt="" coords="745,267,940,308"/>
+<area shape="rect" id="node10" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ac3143c8ff0936c1e9b59af4aea10eaf7" title="Establece el tipo del evento." alt="" coords="745,332,940,373"/>
+<area shape="rect" id="node11" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a6c7898a22b8f69e2d5a9373de0107587" title="Establece la ubicación del evento." alt="" coords="745,397,940,439"/>
+<area shape="rect" id="node12" href="$classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a057519104f9318716e1ed64e866c0ac3" title="Busca y devuelve un evento según su identificador único." alt="" coords="255,231,452,272"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a9132536f352fc82198aba5688fb344c4" title="Obtiene el ID del evento." alt="" coords="501,165,696,207"/>
+<area shape="rect" id="node4" href="$classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a4108a6eb6dd04f3225b4cd0fb0fb3bae" title="Lee todos los eventos del archivo y los devuelve como una lista de objetos EventoDTO." alt="" coords="500,231,697,272"/>
+<area shape="rect" id="node7" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a262727a8795ba4b60e69cc05da40367e" title="Establece el ID del evento." alt="" coords="745,201,940,243"/>
+</map>

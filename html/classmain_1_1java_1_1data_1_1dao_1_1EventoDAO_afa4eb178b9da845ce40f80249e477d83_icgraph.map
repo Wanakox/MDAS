@@ -1,0 +1,4 @@
+<map id="main.java.data.dao.EventoDAO.eliminarEvento" name="main.java.data.dao.EventoDAO.eliminarEvento">
+<area shape="rect" id="node1" title="Elimina un evento del archivo según su ID." alt="" coords="255,5,452,47"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1controller_1_1EventoController.html#aae102370aefb94231437ff1292f463d4" title="Elimina un evento si existe por su ID." alt="" coords="5,5,207,47"/>
+</map>

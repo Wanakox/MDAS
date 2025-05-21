@@ -1,0 +1,4 @@
+<map id="main.java.controller.EntradaController.imprimirEntradasDeUsuario" name="main.java.controller.EntradaController.imprimirEntradasDeUsuario">
+<area shape="rect" id="node1" title="Método para imprimir todas las entradas asociadas a un usuario." alt="" coords="5,5,276,47"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1data_1_1dao_1_1EntradaDAO.html#aa705d2723ed942dcc743b28adc1c2cfe" title="Busca todas las entradas asociadas a un poseedor." alt="" coords="324,5,527,47"/>
+</map>

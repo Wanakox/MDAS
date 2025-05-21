@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MDAS - Eventos: Fichero Fuente src/main/java/model/Pago.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MDAS - Eventos
+   </div>
+   <div id="projectbrief">Gestor de eventos deportivos o festivales donde se puede gestionar entradas, usuarios y eventos.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('Pago_8java_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Pago.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Pago_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>main.java.model;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> java.time.LocalDate;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html">   10</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classmain_1_1java_1_1model_1_1Pago.html">Pago</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">private</span> LocalDate fecha;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">double</span> precio;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">private</span> String titularTarjeta;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">private</span> String numeroTarjeta;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">private</span> String caducidadTarjeta; <span class="comment">// Formato MM/YY</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> cvv;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html#ac9e985e735a1f0a6370cdea3196c279e">   22</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html#ac9e985e735a1f0a6370cdea3196c279e">Pago</a>() {}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html#a5fb23878008ecd2da872342b63af9377">   35</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html#a5fb23878008ecd2da872342b63af9377">Pago</a>(LocalDate fecha, <span class="keywordtype">double</span> precio, String titularTarjeta, String numeroTarjeta, String caducidadTarjeta, <span class="keywordtype">int</span> cvv) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        this.fecha = fecha;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        this.precio = precio;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        this.titularTarjeta = titularTarjeta;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        this.numeroTarjeta = numeroTarjeta;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        this.caducidadTarjeta = caducidadTarjeta;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        this.cvv = cvv;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html#a578ad9fe56aa34e6f551a3a36eaab66f">   49</a></span>&#160;    <span class="keyword">public</span> LocalDate <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html#a578ad9fe56aa34e6f551a3a36eaab66f">getFecha</a>() {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> fecha;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html#af551ba9a385f7f291d679831b457812e">   58</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html#af551ba9a385f7f291d679831b457812e">setFecha</a>(LocalDate fecha) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        this.fecha = fecha;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html#a268e20adaf75a47a112fe579193e8f5a">   67</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html#a268e20adaf75a47a112fe579193e8f5a">getPrecio</a>() {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> precio;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html#a75dd3700cb434c07aca44f4c8cecfbba">   76</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html#a75dd3700cb434c07aca44f4c8cecfbba">setPrecio</a>(<span class="keywordtype">double</span> precio) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        this.precio = precio;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html#a4e8ca237c4e49127c967c22c5cde140c">   85</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html#a4e8ca237c4e49127c967c22c5cde140c">getTitularTarjeta</a>() {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> titularTarjeta;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html#a5693f24fac29e1694018d2405127d5f7">   94</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html#a5693f24fac29e1694018d2405127d5f7">setTitularTarjeta</a>(String titularTarjeta) {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        this.titularTarjeta = titularTarjeta;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html#a58570b22961cb71a69ef0fe1aec5466e">  103</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html#a58570b22961cb71a69ef0fe1aec5466e">getNumeroTarjeta</a>() {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> numeroTarjeta;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html#ae83f939c0d856719b669b00082459b42">  112</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html#ae83f939c0d856719b669b00082459b42">setNumeroTarjeta</a>(String numeroTarjeta) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        this.numeroTarjeta = numeroTarjeta;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html#a8bbff402a92ade2a4de98c5d6beb8549">  121</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html#a8bbff402a92ade2a4de98c5d6beb8549">getCaducidadTarjeta</a>() {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordflow">return</span> caducidadTarjeta;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html#acedb90cdd7a806d1ff291a9ff6de084b">  130</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html#acedb90cdd7a806d1ff291a9ff6de084b">setCaducidadTarjeta</a>(String caducidadTarjeta) {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        this.caducidadTarjeta = caducidadTarjeta;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html#ae586fb255a05620cd1c14237eb3b9a49">  139</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html#ae586fb255a05620cd1c14237eb3b9a49">getCvv</a>() {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordflow">return</span> cvv;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html#a5e19f2d8532e58dffee9c044c36e1066">  148</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html#a5e19f2d8532e58dffee9c044c36e1066">setCvv</a>(<span class="keywordtype">int</span> cvv) {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        this.cvv = cvv;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    @Override</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Pago.html#a65c362ee8211cb0c96a272b08e319dd5">  158</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html#a65c362ee8211cb0c96a272b08e319dd5">toString</a>() {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Pago{&quot;</span> +</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                <span class="stringliteral">&quot;fecha=&quot;</span> + fecha +</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <span class="stringliteral">&quot;, precio=&quot;</span> + precio +</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                <span class="stringliteral">&quot;, titularTarjeta=&#39;&quot;</span> + titularTarjeta + <span class="charliteral">&#39;\&#39;&#39;</span> +</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                <span class="stringliteral">&quot;, numeroTarjeta=&#39;&quot;</span> + numeroTarjeta + <span class="charliteral">&#39;\&#39;&#39;</span> +</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                <span class="stringliteral">&quot;, caducidadTarjeta=&#39;&quot;</span> + caducidadTarjeta + <span class="charliteral">&#39;\&#39;&#39;</span> +</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                <span class="stringliteral">&quot;, cvv=&quot;</span> + cvv +</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <span class="charliteral">&#39;}&#39;</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;}</div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html">main.java.model.Pago</a></div><div class="ttdoc">Representa un pago realizado mediante tarjeta.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00010">Pago.java:10</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html_a268e20adaf75a47a112fe579193e8f5a"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html#a268e20adaf75a47a112fe579193e8f5a">main.java.model.Pago.getPrecio</a></div><div class="ttdeci">double getPrecio()</div><div class="ttdoc">Obtiene el precio del pago.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00067">Pago.java:67</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html_a4e8ca237c4e49127c967c22c5cde140c"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html#a4e8ca237c4e49127c967c22c5cde140c">main.java.model.Pago.getTitularTarjeta</a></div><div class="ttdeci">String getTitularTarjeta()</div><div class="ttdoc">Obtiene el nombre del titular de la tarjeta.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00085">Pago.java:85</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html_a5693f24fac29e1694018d2405127d5f7"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html#a5693f24fac29e1694018d2405127d5f7">main.java.model.Pago.setTitularTarjeta</a></div><div class="ttdeci">void setTitularTarjeta(String titularTarjeta)</div><div class="ttdoc">Establece el nombre del titular de la tarjeta.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00094">Pago.java:94</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html_a578ad9fe56aa34e6f551a3a36eaab66f"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html#a578ad9fe56aa34e6f551a3a36eaab66f">main.java.model.Pago.getFecha</a></div><div class="ttdeci">LocalDate getFecha()</div><div class="ttdoc">Obtiene la fecha del pago.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00049">Pago.java:49</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html_a58570b22961cb71a69ef0fe1aec5466e"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html#a58570b22961cb71a69ef0fe1aec5466e">main.java.model.Pago.getNumeroTarjeta</a></div><div class="ttdeci">String getNumeroTarjeta()</div><div class="ttdoc">Obtiene el número de la tarjeta.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00103">Pago.java:103</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html_a5e19f2d8532e58dffee9c044c36e1066"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html#a5e19f2d8532e58dffee9c044c36e1066">main.java.model.Pago.setCvv</a></div><div class="ttdeci">void setCvv(int cvv)</div><div class="ttdoc">Establece el código de verificación (CVV) de la tarjeta.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00148">Pago.java:148</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html_a5fb23878008ecd2da872342b63af9377"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html#a5fb23878008ecd2da872342b63af9377">main.java.model.Pago.Pago</a></div><div class="ttdeci">Pago(LocalDate fecha, double precio, String titularTarjeta, String numeroTarjeta, String caducidadTarjeta, int cvv)</div><div class="ttdoc">Constructor completo.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00035">Pago.java:35</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html_a65c362ee8211cb0c96a272b08e319dd5"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html#a65c362ee8211cb0c96a272b08e319dd5">main.java.model.Pago.toString</a></div><div class="ttdeci">String toString()</div><div class="ttdoc">Representación en forma de cadena del objeto Pago.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00158">Pago.java:158</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html_a75dd3700cb434c07aca44f4c8cecfbba"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html#a75dd3700cb434c07aca44f4c8cecfbba">main.java.model.Pago.setPrecio</a></div><div class="ttdeci">void setPrecio(double precio)</div><div class="ttdoc">Establece el precio del pago.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00076">Pago.java:76</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html_a8bbff402a92ade2a4de98c5d6beb8549"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html#a8bbff402a92ade2a4de98c5d6beb8549">main.java.model.Pago.getCaducidadTarjeta</a></div><div class="ttdeci">String getCaducidadTarjeta()</div><div class="ttdoc">Obtiene la fecha de caducidad de la tarjeta.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00121">Pago.java:121</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html_ac9e985e735a1f0a6370cdea3196c279e"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html#ac9e985e735a1f0a6370cdea3196c279e">main.java.model.Pago.Pago</a></div><div class="ttdeci">Pago()</div><div class="ttdoc">Constructor vacío.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00022">Pago.java:22</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html_acedb90cdd7a806d1ff291a9ff6de084b"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html#acedb90cdd7a806d1ff291a9ff6de084b">main.java.model.Pago.setCaducidadTarjeta</a></div><div class="ttdeci">void setCaducidadTarjeta(String caducidadTarjeta)</div><div class="ttdoc">Establece la fecha de caducidad de la tarjeta.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00130">Pago.java:130</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html_ae586fb255a05620cd1c14237eb3b9a49"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html#ae586fb255a05620cd1c14237eb3b9a49">main.java.model.Pago.getCvv</a></div><div class="ttdeci">int getCvv()</div><div class="ttdoc">Obtiene el código de verificación (CVV) de la tarjeta.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00139">Pago.java:139</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html_ae83f939c0d856719b669b00082459b42"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html#ae83f939c0d856719b669b00082459b42">main.java.model.Pago.setNumeroTarjeta</a></div><div class="ttdeci">void setNumeroTarjeta(String numeroTarjeta)</div><div class="ttdoc">Establece el número de la tarjeta.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00112">Pago.java:112</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html_af551ba9a385f7f291d679831b457812e"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html#af551ba9a385f7f291d679831b457812e">main.java.model.Pago.setFecha</a></div><div class="ttdeci">void setFecha(LocalDate fecha)</div><div class="ttdoc">Establece la fecha del pago.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00058">Pago.java:58</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a class="el" href="dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a class="el" href="dir_db9b49385c2f2a6a62f75ae1753957ce.html">model</a></li><li class="navelem"><a class="el" href="Pago_8java.html">Pago.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

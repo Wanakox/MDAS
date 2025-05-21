@@ -1,0 +1,8 @@
+<map id="main.java.model.Usuario.getTipo" name="main.java.model.Usuario.getTipo">
+<area shape="rect" id="node1" title="Obtiene el tipo de usuario." alt="" coords="759,101,997,127"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a251aa3bbf43b389024e8d973a9da280f" title="Guarda un nuevo usuario en el archivo." alt="" coords="506,5,709,47"/>
+<area shape="rect" id="node4" href="$classmain_1_1app_1_1Main.html#afa131601dd460dd9376ad4a9f1945ada" title=" " alt="" coords="5,71,161,98"/>
+<area shape="rect" id="node5" href="$classmain_1_1java_1_1controller_1_1UsuarioController.html#a3189271859759fe72a275d9b7c1da78e" title="Método para realizar el inicio de sesión." alt="" coords="504,123,711,164"/>
+<area shape="rect" id="node6" href="$classmain_1_1java_1_1controller_1_1UsuarioController.html#ad8f29bb5846906bb953e16001c3beb0b" title=" " alt="" coords="209,152,456,193"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1controller_1_1UsuarioController.html#a80fc81f1a5bc50470e6b59c239d7a865" title="Método para registrar un nuevo usuario." alt="" coords="229,5,436,47"/>
+</map>

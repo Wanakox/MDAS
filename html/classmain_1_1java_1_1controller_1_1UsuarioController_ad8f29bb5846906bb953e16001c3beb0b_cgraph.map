@@ -1,0 +1,7 @@
+<map id="main.java.controller.UsuarioController.iniciarSesionConUsuario" name="main.java.controller.UsuarioController.iniciarSesionConUsuario">
+<area shape="rect" id="node1" title=" " alt="" coords="5,71,252,112"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a27fabd0722f8e67d54cc584d011b3b0f" title="Busca un usuario por su dirección de correo electrónico." alt="" coords="313,5,525,47"/>
+<area shape="rect" id="node4" href="$classmain_1_1java_1_1model_1_1Usuario.html#a91801a0fd53feae645c7e3518e8fbe33" title="Obtiene la contraseña del usuario." alt="" coords="314,71,525,112"/>
+<area shape="rect" id="node5" href="$classmain_1_1java_1_1model_1_1Usuario.html#abd14a08d49811da2505efff9a4ee503c" title="Obtiene el tipo de usuario." alt="" coords="300,137,539,163"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#ab31282acb5c8cd23ad38399ac4be3871" title="Obtiene todos los usuarios almacenados en el archivo." alt="" coords="587,5,789,47"/>
+</map>

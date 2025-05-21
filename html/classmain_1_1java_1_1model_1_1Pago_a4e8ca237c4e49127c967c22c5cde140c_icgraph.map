@@ -1,0 +1,5 @@
+<map id="main.java.model.Pago.getTitularTarjeta" name="main.java.model.Pago.getTitularTarjeta">
+<area shape="rect" id="node1" title="Obtiene el nombre del titular de la tarjeta." alt="" coords="591,5,783,47"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1data_1_1dao_1_1PagoDAO.html#af1ee52cfbb0f3fe4fd02093ac0af4c67" title="Guarda los datos de una tarjeta en el archivo de pagos." alt="" coords="276,5,543,47"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1controller_1_1PagoController.html#a90cb614b9db3f1ecd16dd68a46eb16f9" title="Método para solicitar los datos de la tarjeta bancaria al usuario y guardarlos en el fichero." alt="" coords="5,5,228,47"/>
+</map>

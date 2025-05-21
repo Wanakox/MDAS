@@ -1,0 +1,4 @@
+<map id="main.java.data.dao.UsuarioDAO.buscarUsuarioPorCorreo" name="main.java.data.dao.UsuarioDAO.buscarUsuarioPorCorreo">
+<area shape="rect" id="node1" title="Busca un usuario por su dirección de correo electrónico." alt="" coords="5,5,217,47"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#ab31282acb5c8cd23ad38399ac4be3871" title="Obtiene todos los usuarios almacenados en el archivo." alt="" coords="265,5,468,47"/>
+</map>

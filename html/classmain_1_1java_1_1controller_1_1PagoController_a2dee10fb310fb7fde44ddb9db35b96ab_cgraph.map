@@ -1,0 +1,5 @@
+<map id="main.java.controller.PagoController.RecargarCartera" name="main.java.controller.PagoController.RecargarCartera">
+<area shape="rect" id="node1" title="Método para recargar la cartera de un usuario." alt="" coords="5,39,200,80"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a01d8e9192b4508d15d5bd57617ddcf7b" title="Modifica el saldo de un usuario identificado por su correo." alt="" coords="248,5,451,47"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a8c00a7b955e903b11526596a49be23d6" title="Obtiene el saldo actual de un usuario a partir de su correo electrónico." alt="" coords="248,71,451,112"/>
+</map>

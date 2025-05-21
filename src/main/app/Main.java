@@ -1,5 +1,12 @@
 package main.app;
 
+/**
+ * @file Main.java
+ * @brief Clase principal de la aplicación.
+ * @details Esta clase contiene el método main que inicia la aplicación y gestiona el menú principal.
+ * @author Grupo 2
+ */
+
 import main.java.controller.UsuarioController;
 import main.java.controller.EntradaController;
 import main.java.controller.EventoController;

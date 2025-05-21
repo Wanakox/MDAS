@@ -1,0 +1,9 @@
+<map id="main.java.data.dao.PagoDAO.guardarTarjeta" name="main.java.data.dao.PagoDAO.guardarTarjeta">
+<area shape="rect" id="node1" title="Guarda los datos de una tarjeta en el archivo de pagos." alt="" coords="5,156,272,197"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1model_1_1Pago.html#a8bbff402a92ade2a4de98c5d6beb8549" title="Obtiene la fecha de caducidad de la tarjeta." alt="" coords="333,5,525,47"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1model_1_1Pago.html#ae586fb255a05620cd1c14237eb3b9a49" title="Obtiene el código de verificación (CVV) de la tarjeta." alt="" coords="320,71,537,98"/>
+<area shape="rect" id="node4" href="$classmain_1_1java_1_1model_1_1Pago.html#a578ad9fe56aa34e6f551a3a36eaab66f" title="Obtiene la fecha del pago." alt="" coords="333,123,525,164"/>
+<area shape="rect" id="node5" href="$classmain_1_1java_1_1model_1_1Pago.html#a58570b22961cb71a69ef0fe1aec5466e" title="Obtiene el número de la tarjeta." alt="" coords="333,188,525,229"/>
+<area shape="rect" id="node6" href="$classmain_1_1java_1_1model_1_1Pago.html#a268e20adaf75a47a112fe579193e8f5a" title="Obtiene el precio del pago." alt="" coords="333,253,525,295"/>
+<area shape="rect" id="node7" href="$classmain_1_1java_1_1model_1_1Pago.html#a4e8ca237c4e49127c967c22c5cde140c" title="Obtiene el nombre del titular de la tarjeta." alt="" coords="333,319,525,360"/>
+</map>

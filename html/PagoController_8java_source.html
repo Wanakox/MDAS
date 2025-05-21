@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MDAS - Eventos: Fichero Fuente src/main/java/controller/PagoController.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MDAS - Eventos
+   </div>
+   <div id="projectbrief">Gestor de eventos deportivos o festivales donde se puede gestionar entradas, usuarios y eventos.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('PagoController_8java_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">PagoController.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="PagoController_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>main.java.controller;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> main.java.data.dao.EntradaDAO;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> main.java.data.dao.PagoDAO;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> main.java.data.dao.UsuarioDAO;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> main.java.model.Pago;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> java.time.LocalDate;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">import</span> java.util.Scanner;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1PagoController.html">   11</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classmain_1_1java_1_1controller_1_1PagoController.html">PagoController</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1PagoDAO.html">PagoDAO</a> pagoDAO;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html">UsuarioDAO</a> usuarioDAO;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1EntradaDAO.html">EntradaDAO</a> entradaDAO;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1PagoController.html#aee229b7132f955892d41f7141a971765">   20</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classmain_1_1java_1_1controller_1_1PagoController.html#aee229b7132f955892d41f7141a971765">PagoController</a>() {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        this.pagoDAO = <span class="keyword">new</span> <a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1PagoDAO.html">PagoDAO</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        this.usuarioDAO = <span class="keyword">new</span> <a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html">UsuarioDAO</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        this.entradaDAO = <span class="keyword">new</span> <a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1EntradaDAO.html">EntradaDAO</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1PagoController.html#a0fbbfec8bd65dde22b594a1659fabc5e">   30</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code" href="classmain_1_1java_1_1controller_1_1PagoController.html#a0fbbfec8bd65dde22b594a1659fabc5e">solicitarPrecioFinal</a>() {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordtype">double</span> precio = 0.0;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">boolean</span> entradaValida = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">while</span> (!entradaValida) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                System.out.print(<span class="stringliteral">&quot;Ingrese el precio final: &quot;</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                precio = Double.parseDouble(scanner.nextLine().trim());</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                entradaValida = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            } <span class="keywordflow">catch</span> (NumberFormatException e) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                System.out.println(<span class="stringliteral">&quot;Entrada no válida. Por favor, ingrese un número válido.&quot;</span>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> precio;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1PagoController.html#a90cb614b9db3f1ecd16dd68a46eb16f9">   52</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html">Pago</a> <a class="code" href="classmain_1_1java_1_1controller_1_1PagoController.html#a90cb614b9db3f1ecd16dd68a46eb16f9">solicitarDatosTarjeta</a>(<span class="keywordtype">double</span> precio) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        System.out.print(<span class="stringliteral">&quot;Ingrese el nombre del titular de la tarjeta: &quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        String titularTarjeta = scanner.nextLine();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        System.out.print(<span class="stringliteral">&quot;Ingrese el número de la tarjeta: &quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        String numeroTarjeta = scanner.nextLine();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        System.out.print(<span class="stringliteral">&quot;Ingrese la fecha de caducidad de la tarjeta (MM/YY): &quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        String caducidadTarjeta = scanner.nextLine();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        System.out.print(<span class="stringliteral">&quot;Ingrese el CVV de la tarjeta: &quot;</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">int</span> cvv = Integer.parseInt(scanner.nextLine().trim());</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html">Pago</a> pago = <span class="keyword">new</span> <a class="code" href="classmain_1_1java_1_1model_1_1Pago.html">Pago</a>(LocalDate.now(), precio, titularTarjeta, numeroTarjeta, caducidadTarjeta, cvv);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">boolean</span> guardado = pagoDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1PagoDAO.html#af1ee52cfbb0f3fe4fd02093ac0af4c67">guardarTarjeta</a>(pago);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span> (guardado) {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            System.out.println(<span class="stringliteral">&quot;Los datos de la tarjeta se han guardado correctamente.&quot;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            System.out.println(<span class="stringliteral">&quot;Hubo un error al guardar los datos de la tarjeta.&quot;</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> pago;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1PagoController.html#a86165dedf761ff693c19dfaaed4f920f">   83</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classmain_1_1java_1_1controller_1_1PagoController.html#a86165dedf761ff693c19dfaaed4f920f">notificarProceso</a>(<span class="keywordtype">boolean</span> exito) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">if</span> (exito) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            System.out.println(<span class="stringliteral">&quot;El pago se ha procesado correctamente.&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            System.out.println(<span class="stringliteral">&quot;Hubo un error al procesar el pago.&quot;</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1PagoController.html#a2dee10fb310fb7fde44ddb9db35b96ab">   96</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classmain_1_1java_1_1controller_1_1PagoController.html#a2dee10fb310fb7fde44ddb9db35b96ab">RecargarCartera</a>(<span class="keywordtype">double</span> cantidad, String correoUsuario) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">if</span> (cantidad &lt;= 0) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            System.out.println(<span class="stringliteral">&quot;La cantidad a recargar debe ser mayor a 0.&quot;</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">double</span> saldoActual = usuarioDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a8c00a7b955e903b11526596a49be23d6">obtenerSaldo</a>(correoUsuario);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">double</span> saldoNuevo = saldoActual + cantidad;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">boolean</span> actualizado = usuarioDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a01d8e9192b4508d15d5bd57617ddcf7b">modificarSaldo</a>(correoUsuario, saldoNuevo);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">if</span> (actualizado) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            System.out.println(<span class="stringliteral">&quot;La recarga de la cartera se ha realizado correctamente. Nuevo saldo: &quot;</span> + saldoNuevo);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            System.out.println(<span class="stringliteral">&quot;Hubo un error al recargar la cartera.&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1PagoController.html#a9a760a806813a2a79ccb64d4cfea443e">  119</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classmain_1_1java_1_1controller_1_1PagoController.html#a9a760a806813a2a79ccb64d4cfea443e">procesarPago</a>(String correoUsuario, <span class="keywordtype">double</span> cantidad) {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">if</span> (cantidad &lt;= 0) {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            System.out.println(<span class="stringliteral">&quot;El monto del pago debe ser mayor a 0.&quot;</span>);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordtype">double</span> saldoActual = usuarioDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a8c00a7b955e903b11526596a49be23d6">obtenerSaldo</a>(correoUsuario);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">if</span> (saldoActual &lt; cantidad) {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            System.out.println(<span class="stringliteral">&quot;Saldo insuficiente para realizar el pago.&quot;</span>);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordtype">double</span> saldoNuevo = saldoActual - cantidad;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordtype">boolean</span> saldoActualizado = usuarioDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a01d8e9192b4508d15d5bd57617ddcf7b">modificarSaldo</a>(correoUsuario, saldoNuevo);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">if</span> (!saldoActualizado) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            System.out.println(<span class="stringliteral">&quot;Hubo un error al actualizar el saldo del usuario.&quot;</span>);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        String nombreUsuario = usuarioDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a4a6697f3e3998f0f974882db7187a6ef">correoConseguirNombre</a>(correoUsuario);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordtype">boolean</span> entradaComprada = entradaDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1EntradaDAO.html#a4a181529e15a537984eedf060241e973">comprobarEntrada</a>(nombreUsuario, cantidad);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">if</span> (entradaComprada) {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            System.out.println(<span class="stringliteral">&quot;El pago se ha procesado correctamente. Nuevo saldo: &quot;</span> + saldoNuevo);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            System.out.println(<span class="stringliteral">&quot;Hubo un error al procesar el pago.&quot;</span>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1PagoController_html"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1PagoController.html">main.java.controller.PagoController</a></div><div class="ttdef"><b>Definition:</b> <a href="PagoController_8java_source.html#l00011">PagoController.java:11</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1PagoController_html_a0fbbfec8bd65dde22b594a1659fabc5e"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1PagoController.html#a0fbbfec8bd65dde22b594a1659fabc5e">main.java.controller.PagoController.solicitarPrecioFinal</a></div><div class="ttdeci">double solicitarPrecioFinal()</div><div class="ttdoc">Método para solicitar el precio final al usuario.</div><div class="ttdef"><b>Definition:</b> <a href="PagoController_8java_source.html#l00030">PagoController.java:30</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1PagoController_html_a2dee10fb310fb7fde44ddb9db35b96ab"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1PagoController.html#a2dee10fb310fb7fde44ddb9db35b96ab">main.java.controller.PagoController.RecargarCartera</a></div><div class="ttdeci">void RecargarCartera(double cantidad, String correoUsuario)</div><div class="ttdoc">Método para recargar la cartera de un usuario.</div><div class="ttdef"><b>Definition:</b> <a href="PagoController_8java_source.html#l00096">PagoController.java:96</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1PagoController_html_a86165dedf761ff693c19dfaaed4f920f"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1PagoController.html#a86165dedf761ff693c19dfaaed4f920f">main.java.controller.PagoController.notificarProceso</a></div><div class="ttdeci">void notificarProceso(boolean exito)</div><div class="ttdoc">Método para notificar el resultado del proceso de pago.</div><div class="ttdef"><b>Definition:</b> <a href="PagoController_8java_source.html#l00083">PagoController.java:83</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1PagoController_html_a90cb614b9db3f1ecd16dd68a46eb16f9"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1PagoController.html#a90cb614b9db3f1ecd16dd68a46eb16f9">main.java.controller.PagoController.solicitarDatosTarjeta</a></div><div class="ttdeci">Pago solicitarDatosTarjeta(double precio)</div><div class="ttdoc">Método para solicitar los datos de la tarjeta bancaria al usuario y guardarlos en el fichero.</div><div class="ttdef"><b>Definition:</b> <a href="PagoController_8java_source.html#l00052">PagoController.java:52</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1PagoController_html_a9a760a806813a2a79ccb64d4cfea443e"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1PagoController.html#a9a760a806813a2a79ccb64d4cfea443e">main.java.controller.PagoController.procesarPago</a></div><div class="ttdeci">void procesarPago(String correoUsuario, double cantidad)</div><div class="ttdoc">Método para procesar un pago y descontar el saldo del usuario.</div><div class="ttdef"><b>Definition:</b> <a href="PagoController_8java_source.html#l00119">PagoController.java:119</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1PagoController_html_aee229b7132f955892d41f7141a971765"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1PagoController.html#aee229b7132f955892d41f7141a971765">main.java.controller.PagoController.PagoController</a></div><div class="ttdeci">PagoController()</div><div class="ttdoc">Constructor que inicializa los DAOs necesarios para la gestión de pagos.</div><div class="ttdef"><b>Definition:</b> <a href="PagoController_8java_source.html#l00020">PagoController.java:20</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dao_1_1EntradaDAO_html"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dao_1_1EntradaDAO.html">main.java.data.dao.EntradaDAO</a></div><div class="ttdoc">Clase DAO (Data Access Object) para gestionar las operaciones CRUD sobre las entradas almacenadas en ...</div><div class="ttdef"><b>Definition:</b> <a href="EntradaDAO_8java_source.html#l00013">EntradaDAO.java:13</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dao_1_1EntradaDAO_html_a4a181529e15a537984eedf060241e973"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dao_1_1EntradaDAO.html#a4a181529e15a537984eedf060241e973">main.java.data.dao.EntradaDAO.comprobarEntrada</a></div><div class="ttdeci">boolean comprobarEntrada(String nombreUsuario, double cantidad)</div><div class="ttdoc">Comprueba si existe una entrada con un nombre de usuario y una cantidad específica.</div><div class="ttdef"><b>Definition:</b> <a href="EntradaDAO_8java_source.html#l00239">EntradaDAO.java:239</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dao_1_1PagoDAO_html"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dao_1_1PagoDAO.html">main.java.data.dao.PagoDAO</a></div><div class="ttdoc">Clase DAO (Data Access Object) responsable de guardar la información de pagos en un archivo de texto ...</div><div class="ttdef"><b>Definition:</b> <a href="PagoDAO_8java_source.html#l00015">PagoDAO.java:15</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dao_1_1PagoDAO_html_af1ee52cfbb0f3fe4fd02093ac0af4c67"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dao_1_1PagoDAO.html#af1ee52cfbb0f3fe4fd02093ac0af4c67">main.java.data.dao.PagoDAO.guardarTarjeta</a></div><div class="ttdeci">boolean guardarTarjeta(Pago pago)</div><div class="ttdoc">Guarda los datos de una tarjeta en el archivo de pagos.</div><div class="ttdef"><b>Definition:</b> <a href="PagoDAO_8java_source.html#l00028">PagoDAO.java:28</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO_html"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html">main.java.data.dao.UsuarioDAO</a></div><div class="ttdoc">Clase DAO (Data Access Object) para manejar operaciones CRUD relacionadas con los usuarios.</div><div class="ttdef"><b>Definition:</b> <a href="UsuarioDAO_8java_source.html#l00017">UsuarioDAO.java:17</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO_html_a01d8e9192b4508d15d5bd57617ddcf7b"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a01d8e9192b4508d15d5bd57617ddcf7b">main.java.data.dao.UsuarioDAO.modificarSaldo</a></div><div class="ttdeci">boolean modificarSaldo(String correoUsuario, double saldoNuevo)</div><div class="ttdoc">Modifica el saldo de un usuario identificado por su correo.</div><div class="ttdef"><b>Definition:</b> <a href="UsuarioDAO_8java_source.html#l00169">UsuarioDAO.java:169</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO_html_a4a6697f3e3998f0f974882db7187a6ef"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a4a6697f3e3998f0f974882db7187a6ef">main.java.data.dao.UsuarioDAO.correoConseguirNombre</a></div><div class="ttdeci">String correoConseguirNombre(String correo)</div><div class="ttdoc">Obtiene el nombre de un usuario a partir de su correo electrónico.</div><div class="ttdef"><b>Definition:</b> <a href="UsuarioDAO_8java_source.html#l00208">UsuarioDAO.java:208</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO_html_a8c00a7b955e903b11526596a49be23d6"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a8c00a7b955e903b11526596a49be23d6">main.java.data.dao.UsuarioDAO.obtenerSaldo</a></div><div class="ttdeci">double obtenerSaldo(String correoUsuario)</div><div class="ttdoc">Obtiene el saldo actual de un usuario a partir de su correo electrónico.</div><div class="ttdef"><b>Definition:</b> <a href="UsuarioDAO_8java_source.html#l00147">UsuarioDAO.java:147</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Pago_html"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Pago.html">main.java.model.Pago</a></div><div class="ttdoc">Representa un pago realizado mediante tarjeta.</div><div class="ttdef"><b>Definition:</b> <a href="Pago_8java_source.html#l00010">Pago.java:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a class="el" href="dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a class="el" href="dir_750e0732a4faa2f7034aa060c7582428.html">controller</a></li><li class="navelem"><a class="el" href="PagoController_8java.html">PagoController.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

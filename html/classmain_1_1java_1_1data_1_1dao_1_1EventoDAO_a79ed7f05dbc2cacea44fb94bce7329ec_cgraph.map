@@ -1,0 +1,12 @@
+<map id="main.java.data.dao.EventoDAO.actualizarEvento" name="main.java.data.dao.EventoDAO.actualizarEvento">
+<area shape="rect" id="node1" title="Actualiza un evento existente (por ID) en el archivo." alt="" coords="5,169,203,211"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a9132536f352fc82198aba5688fb344c4" title="Obtiene el ID del evento." alt="" coords="252,136,447,177"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a4108a6eb6dd04f3225b4cd0fb0fb3bae" title="Lee todos los eventos del archivo y los devuelve como una lista de objetos EventoDTO." alt="" coords="251,201,448,243"/>
+<area shape="rect" id="node4" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#abd9ab19b0f4780dff5ff94eff65f54fb" title="Establece la fecha del evento." alt="" coords="496,5,691,47"/>
+<area shape="rect" id="node5" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a2b907e06a92045ab21072cfd6ab9c2f0" title="Establece la hora del evento." alt="" coords="496,71,691,112"/>
+<area shape="rect" id="node6" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a262727a8795ba4b60e69cc05da40367e" title="Establece el ID del evento." alt="" coords="496,136,691,177"/>
+<area shape="rect" id="node7" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ad0afbc3a50f608d3965060dcb15a5828" title="Establece el nombre del evento." alt="" coords="496,201,691,243"/>
+<area shape="rect" id="node8" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a86aab7dc711fe28005efb1f895952546" title="Establece el número de entradas disponibles para el evento." alt="" coords="496,267,691,308"/>
+<area shape="rect" id="node9" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ac3143c8ff0936c1e9b59af4aea10eaf7" title="Establece el tipo del evento." alt="" coords="496,332,691,373"/>
+<area shape="rect" id="node10" href="$classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a6c7898a22b8f69e2d5a9373de0107587" title="Establece la ubicación del evento." alt="" coords="496,397,691,439"/>
+</map>

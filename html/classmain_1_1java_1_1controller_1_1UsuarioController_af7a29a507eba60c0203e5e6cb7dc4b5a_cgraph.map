@@ -1,0 +1,4 @@
+<map id="main.java.controller.UsuarioController.eliminarUsuario" name="main.java.controller.UsuarioController.eliminarUsuario">
+<area shape="rect" id="node1" title="Método para eliminar un usuario." alt="" coords="5,5,212,47"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#ab374b21e4a58335baf32c2488e42af62" title="Elimina un usuario del archivo usando su correo electrónico." alt="" coords="260,5,463,47"/>
+</map>

@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MDAS - Eventos: Fichero Fuente src/main/java/model/Evento.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MDAS - Eventos
+   </div>
+   <div id="projectbrief">Gestor de eventos deportivos o festivales donde se puede gestionar entradas, usuarios y eventos.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('Evento_8java_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Evento.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Evento_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>main.java.model;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> java.time.LocalDate;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> java.time.LocalTime;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Evento.html">   11</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classmain_1_1java_1_1model_1_1Evento.html">Evento</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keywordtype">int</span> id;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">private</span> <span class="keyword">final</span> String nombre;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keywordtype">int</span> numeroEntradas;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">private</span> <span class="keyword">final</span> LocalDate fecha;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">private</span> <span class="keyword">final</span> LocalTime hora;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span> <span class="keyword">final</span> String ubicacion;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">private</span> <span class="keyword">final</span> String tipo;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">private</span> <a class="code" href="classmain_1_1java_1_1model_1_1Evento.html">Evento</a>(EventoBuilder builder) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        this.<span class="keywordtype">id</span> = builder.id;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        this.nombre = builder.nombre;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        this.numeroEntradas = builder.numeroEntradas;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        this.fecha = builder.fecha;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        this.hora = builder.hora;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        this.ubicacion = builder.ubicacion;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        this.tipo = builder.tipo;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Evento.html#a2972fcca84bd1b8dd227349189cece0e">   40</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="classmain_1_1java_1_1model_1_1Evento.html#a2972fcca84bd1b8dd227349189cece0e">getId</a>() {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> id;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Evento.html#a424b05e0b465aff015743565da2aa9dc">   49</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classmain_1_1java_1_1model_1_1Evento.html#a424b05e0b465aff015743565da2aa9dc">getNombre</a>() {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> nombre;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Evento.html#a3b5e3c557f16dfbb9b2570eaa5348567">   58</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="classmain_1_1java_1_1model_1_1Evento.html#a3b5e3c557f16dfbb9b2570eaa5348567">getNumeroEntradas</a>() {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> numeroEntradas;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Evento.html#ae5db9b0c37436bccc5181019207cb7d7">   67</a></span>&#160;    <span class="keyword">public</span> LocalDate <a class="code" href="classmain_1_1java_1_1model_1_1Evento.html#ae5db9b0c37436bccc5181019207cb7d7">getFecha</a>() {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> fecha;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Evento.html#a6f84ed76cce8307d740143f104ab5ee9">   76</a></span>&#160;    <span class="keyword">public</span> LocalTime <a class="code" href="classmain_1_1java_1_1model_1_1Evento.html#a6f84ed76cce8307d740143f104ab5ee9">getHora</a>() {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordflow">return</span> hora;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Evento.html#a7b42d42f3ffe112ee510a4d5d9e3f85e">   85</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classmain_1_1java_1_1model_1_1Evento.html#a7b42d42f3ffe112ee510a4d5d9e3f85e">getUbicacion</a>() {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">return</span> ubicacion;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Evento.html#ab345895b058d5b0e019794856ad4bf70">   94</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classmain_1_1java_1_1model_1_1Evento.html#ab345895b058d5b0e019794856ad4bf70">getTipo</a>() {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> tipo;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    @Override</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1model_1_1Evento.html#af7b0307a7f489261b005784efb884390">  104</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classmain_1_1java_1_1model_1_1Evento.html#af7b0307a7f489261b005784efb884390">toString</a>() {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Evento{&quot;</span> +</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="stringliteral">&quot;id=&quot;</span> + <span class="keywordtype">id</span> +</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="stringliteral">&quot;, nombre=&#39;&quot;</span> + nombre + <span class="charliteral">&#39;\&#39;&#39;</span> +</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="stringliteral">&quot;, numeroEntradas=&quot;</span> + numeroEntradas +</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <span class="stringliteral">&quot;, fecha=&quot;</span> + fecha +</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="stringliteral">&quot;, hora=&quot;</span> + hora +</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="stringliteral">&quot;, ubicacion=&#39;&quot;</span> + ubicacion + <span class="charliteral">&#39;\&#39;&#39;</span> +</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <span class="stringliteral">&quot;, tipo=&#39;&quot;</span> + tipo + <span class="charliteral">&#39;\&#39;&#39;</span> +</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="charliteral">&#39;}&#39;</span>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>EventoBuilder {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span> id;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keyword">private</span> String nombre;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">int</span> numeroEntradas;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keyword">private</span> LocalDate fecha;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">private</span> LocalTime hora;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keyword">private</span> String ubicacion;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keyword">private</span> String tipo;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keyword">public</span> EventoBuilder setId(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            this.<span class="keywordtype">id</span> = id;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keyword">public</span> EventoBuilder setNombre(String nombre) {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            this.nombre = nombre;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keyword">public</span> EventoBuilder setNumeroEntradas(<span class="keywordtype">int</span> numeroEntradas) {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            this.numeroEntradas = numeroEntradas;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keyword">public</span> EventoBuilder setFecha(LocalDate fecha) {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            this.fecha = fecha;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keyword">public</span> EventoBuilder setHora(LocalTime hora) {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            this.hora = hora;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keyword">public</span> EventoBuilder setUbicacion(String ubicacion) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            this.ubicacion = ubicacion;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        }</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keyword">public</span> EventoBuilder setTipo(String tipo) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            this.tipo = tipo;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keyword">public</span> Evento build() {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> Evento(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;}</div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Evento_html"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Evento.html">main.java.model.Evento</a></div><div class="ttdoc">Representa un evento que puede tener entradas asociadas.</div><div class="ttdef"><b>Definition:</b> <a href="Evento_8java_source.html#l00011">Evento.java:11</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Evento_html_a2972fcca84bd1b8dd227349189cece0e"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Evento.html#a2972fcca84bd1b8dd227349189cece0e">main.java.model.Evento.getId</a></div><div class="ttdeci">int getId()</div><div class="ttdoc">Obtiene el ID del evento.</div><div class="ttdef"><b>Definition:</b> <a href="Evento_8java_source.html#l00040">Evento.java:40</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Evento_html_a3b5e3c557f16dfbb9b2570eaa5348567"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Evento.html#a3b5e3c557f16dfbb9b2570eaa5348567">main.java.model.Evento.getNumeroEntradas</a></div><div class="ttdeci">int getNumeroEntradas()</div><div class="ttdoc">Obtiene el número total de entradas disponibles para el evento.</div><div class="ttdef"><b>Definition:</b> <a href="Evento_8java_source.html#l00058">Evento.java:58</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Evento_html_a424b05e0b465aff015743565da2aa9dc"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Evento.html#a424b05e0b465aff015743565da2aa9dc">main.java.model.Evento.getNombre</a></div><div class="ttdeci">String getNombre()</div><div class="ttdoc">Obtiene el nombre del evento.</div><div class="ttdef"><b>Definition:</b> <a href="Evento_8java_source.html#l00049">Evento.java:49</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Evento_html_a6f84ed76cce8307d740143f104ab5ee9"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Evento.html#a6f84ed76cce8307d740143f104ab5ee9">main.java.model.Evento.getHora</a></div><div class="ttdeci">LocalTime getHora()</div><div class="ttdoc">Obtiene la hora del evento.</div><div class="ttdef"><b>Definition:</b> <a href="Evento_8java_source.html#l00076">Evento.java:76</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Evento_html_a7b42d42f3ffe112ee510a4d5d9e3f85e"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Evento.html#a7b42d42f3ffe112ee510a4d5d9e3f85e">main.java.model.Evento.getUbicacion</a></div><div class="ttdeci">String getUbicacion()</div><div class="ttdoc">Obtiene la ubicación del evento.</div><div class="ttdef"><b>Definition:</b> <a href="Evento_8java_source.html#l00085">Evento.java:85</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Evento_html_ab345895b058d5b0e019794856ad4bf70"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Evento.html#ab345895b058d5b0e019794856ad4bf70">main.java.model.Evento.getTipo</a></div><div class="ttdeci">String getTipo()</div><div class="ttdoc">Obtiene el tipo del evento.</div><div class="ttdef"><b>Definition:</b> <a href="Evento_8java_source.html#l00094">Evento.java:94</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Evento_html_ae5db9b0c37436bccc5181019207cb7d7"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Evento.html#ae5db9b0c37436bccc5181019207cb7d7">main.java.model.Evento.getFecha</a></div><div class="ttdeci">LocalDate getFecha()</div><div class="ttdoc">Obtiene la fecha del evento.</div><div class="ttdef"><b>Definition:</b> <a href="Evento_8java_source.html#l00067">Evento.java:67</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1model_1_1Evento_html_af7b0307a7f489261b005784efb884390"><div class="ttname"><a href="classmain_1_1java_1_1model_1_1Evento.html#af7b0307a7f489261b005784efb884390">main.java.model.Evento.toString</a></div><div class="ttdeci">String toString()</div><div class="ttdoc">Devuelve una representación en forma de texto del objeto Evento.</div><div class="ttdef"><b>Definition:</b> <a href="Evento_8java_source.html#l00104">Evento.java:104</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a class="el" href="dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a class="el" href="dir_db9b49385c2f2a6a62f75ae1753957ce.html">model</a></li><li class="navelem"><a class="el" href="Evento_8java.html">Evento.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

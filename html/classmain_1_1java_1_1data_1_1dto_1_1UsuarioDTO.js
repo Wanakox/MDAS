@@ -1,0 +1,27 @@
+var classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO =
+[
+    [ "UsuarioDTO", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#afa9b26a08d29ae51386bf8db70749121", null ],
+    [ "UsuarioDTO", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#a8c061a5017f910102533d65f848c214c", null ],
+    [ "getApellidos", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#a7f57d29bb52193cf6769c5b2c81dad45", null ],
+    [ "getCartera", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#aef6a8acb8f59a26408d60f413a95930b", null ],
+    [ "getContraseña", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#a804af959b821c38b5380ad5d235172c6", null ],
+    [ "getCorreo", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#a00ffbdd1b5e490da2a734d19e7f9e64c", null ],
+    [ "getDNI", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#aa1fb035ff7d3efe43611abf5c963c854", null ],
+    [ "getNombre", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#a8f4b585564a58e6c343ba2c1d9499393", null ],
+    [ "getTipo", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#a628c24170ad619e2dbd4914ab5950c75", null ],
+    [ "setApellidos", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#a28fcb5058c2019044e23c559cc87d9cb", null ],
+    [ "setCartera", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#a194f0ec0863e494afda86026e8ea6d53", null ],
+    [ "setContraseña", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#a17a0a024b358cc7284b2e360501b708f", null ],
+    [ "setCorreo", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#a62f57b98c23e08456b699a084f7bf2fe", null ],
+    [ "setDNI", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#af5c0d30bf60baefceb701b1362c7b4cf", null ],
+    [ "setNombre", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#a59bc3dc221c36d427d38e2f51dfff500", null ],
+    [ "setTipo", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#ab6a2340a193a59488026ad612116c166", null ],
+    [ "toString", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#aa061e13068b34dc6f33d035fc9253b11", null ],
+    [ "apellidos", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#ad0834c8c51cd717e1cc235110eefb540", null ],
+    [ "cartera", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#acae3793f8a627cf70f676c04f587ecc0", null ],
+    [ "contraseña", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#af06daa3af339dd0909390d8de9ef8951", null ],
+    [ "correo", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#aa22fb04fe016fa3682c71d771d7ca8e3", null ],
+    [ "DNI", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#a049db8e410c180db9d7ab5c98cdefdfd", null ],
+    [ "nombre", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#a3e384ecc2adff0f2745601848dfcdf56", null ],
+    [ "tipo", "classmain_1_1java_1_1data_1_1dto_1_1UsuarioDTO.html#a9fad2bd32e75d61114f3d116a4f2af65", null ]
+];

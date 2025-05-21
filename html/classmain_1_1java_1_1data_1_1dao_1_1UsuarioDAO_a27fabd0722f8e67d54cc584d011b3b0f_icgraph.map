@@ -1,0 +1,7 @@
+<map id="main.java.data.dao.UsuarioDAO.buscarUsuarioPorCorreo" name="main.java.data.dao.UsuarioDAO.buscarUsuarioPorCorreo">
+<area shape="rect" id="node1" title="Busca un usuario por su dirección de correo electrónico." alt="" coords="504,71,716,112"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1controller_1_1UsuarioController.html#a3189271859759fe72a275d9b7c1da78e" title="Método para realizar el inicio de sesión." alt="" coords="229,5,436,47"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1controller_1_1UsuarioController.html#ad8f29bb5846906bb953e16001c3beb0b" title=" " alt="" coords="209,71,456,112"/>
+<area shape="rect" id="node5" href="$classmain_1_1java_1_1controller_1_1UsuarioController.html#a80fc81f1a5bc50470e6b59c239d7a865" title="Método para registrar un nuevo usuario." alt="" coords="229,136,436,177"/>
+<area shape="rect" id="node4" href="$classmain_1_1app_1_1Main.html#afa131601dd460dd9376ad4a9f1945ada" title=" " alt="" coords="5,111,161,138"/>
+</map>

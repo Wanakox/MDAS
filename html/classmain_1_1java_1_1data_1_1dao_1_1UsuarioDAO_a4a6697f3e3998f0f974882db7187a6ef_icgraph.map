@@ -1,0 +1,4 @@
+<map id="main.java.data.dao.UsuarioDAO.correoConseguirNombre" name="main.java.data.dao.UsuarioDAO.correoConseguirNombre">
+<area shape="rect" id="node1" title="Obtiene el nombre de un usuario a partir de su correo electrónico." alt="" coords="240,5,453,47"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1controller_1_1PagoController.html#a9a760a806813a2a79ccb64d4cfea443e" title="Método para procesar un pago y descontar el saldo del usuario." alt="" coords="5,5,192,47"/>
+</map>

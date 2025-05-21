@@ -1,0 +1,10 @@
+<map id="main.java.data.dao.UsuarioDAO.obtenerUsuarios" name="main.java.data.dao.UsuarioDAO.obtenerUsuarios">
+<area shape="rect" id="node1" title="Obtiene todos los usuarios almacenados en el archivo." alt="" coords="764,136,967,177"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a27fabd0722f8e67d54cc584d011b3b0f" title="Busca un usuario por su dirección de correo electrónico." alt="" coords="504,71,716,112"/>
+<area shape="rect" id="node7" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a88d88b0fbc024045ea769aad078c3971" title=" " alt="" coords="509,136,711,177"/>
+<area shape="rect" id="node8" href="$classmain_1_1java_1_1controller_1_1UsuarioController.html#ab94cc79ba20a240265a4d595791425f5" title=" " alt="" coords="507,201,713,243"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1controller_1_1UsuarioController.html#a3189271859759fe72a275d9b7c1da78e" title="Método para realizar el inicio de sesión." alt="" coords="229,5,436,47"/>
+<area shape="rect" id="node4" href="$classmain_1_1java_1_1controller_1_1UsuarioController.html#ad8f29bb5846906bb953e16001c3beb0b" title=" " alt="" coords="209,71,456,112"/>
+<area shape="rect" id="node6" href="$classmain_1_1java_1_1controller_1_1UsuarioController.html#a80fc81f1a5bc50470e6b59c239d7a865" title="Método para registrar un nuevo usuario." alt="" coords="229,136,436,177"/>
+<area shape="rect" id="node5" href="$classmain_1_1app_1_1Main.html#afa131601dd460dd9376ad4a9f1945ada" title=" " alt="" coords="5,143,161,170"/>
+</map>

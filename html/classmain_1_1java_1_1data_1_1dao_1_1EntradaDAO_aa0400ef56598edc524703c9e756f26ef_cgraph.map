@@ -1,0 +1,9 @@
+<map id="main.java.data.dao.EntradaDAO.crearEntrada" name="main.java.data.dao.EntradaDAO.crearEntrada">
+<area shape="rect" id="node1" title="Crea una nueva entrada y la agrega al archivo." alt="" coords="5,156,208,197"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1model_1_1Entrada.html#a720b9ff88e4ccb094bbc4739bab58129" title="Obtiene el asiento asignado a la entrada." alt="" coords="270,5,481,47"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1model_1_1Entrada.html#a21f0cb9b51386492ee54f1b7c637e60b" title="Obtiene el identificador único de la entrada." alt="" coords="264,71,487,98"/>
+<area shape="rect" id="node4" href="$classmain_1_1java_1_1model_1_1Entrada.html#af8e1672eb7dd664c4becd92172ff9924" title="Obtiene el identificador del evento asociado a la entrada." alt="" coords="264,123,487,164"/>
+<area shape="rect" id="node5" href="$classmain_1_1java_1_1model_1_1Entrada.html#aa1800252b8b6e27b2ddf6874cac43121" title="Obtiene el nombre del poseedor de la entrada." alt="" coords="270,188,481,229"/>
+<area shape="rect" id="node6" href="$classmain_1_1java_1_1model_1_1Entrada.html#a431ef22f12c0e1a0187c0b5877462c1f" title="Obtiene el precio de la entrada." alt="" coords="270,253,481,295"/>
+<area shape="rect" id="node7" href="$classmain_1_1java_1_1model_1_1Entrada.html#a07842abafffa9f95202428631406065b" title="Obtiene el tipo de la entrada." alt="" coords="256,319,495,346"/>
+</map>

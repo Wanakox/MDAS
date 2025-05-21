@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MDAS - Eventos: Fichero Fuente src/main/java/controller/EventoController.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MDAS - Eventos
+   </div>
+   <div id="projectbrief">Gestor de eventos deportivos o festivales donde se puede gestionar entradas, usuarios y eventos.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('EventoController_8java_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">EventoController.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="EventoController_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>main.java.controller;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> main.java.data.dao.EventoDAO;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> main.java.data.dto.EventoDTO;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> java.time.LocalDate;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">import</span> java.time.LocalTime;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1EventoController.html">   10</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classmain_1_1java_1_1controller_1_1EventoController.html">EventoController</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">private</span> <span class="keyword">final</span> <a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html">EventoDAO</a> eventoDAO;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1EventoController.html#aaeeac25ec93730ecea6a1c9cc2ec61ee">   17</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classmain_1_1java_1_1controller_1_1EventoController.html#aaeeac25ec93730ecea6a1c9cc2ec61ee">EventoController</a>() {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        this.eventoDAO = <span class="keyword">new</span> <a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html">EventoDAO</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1EventoController.html#aab448dbfe0df72202e96b911d1559556">   34</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classmain_1_1java_1_1controller_1_1EventoController.html#aab448dbfe0df72202e96b911d1559556">crearEvento</a>(String titulo, <span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> numeroEntradas,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            String localizacion, String tipoEvento, LocalDate fecha, LocalTime hora) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> (eventoDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a057519104f9318716e1ed64e866c0ac3">obtenerPorId</a>(<span class="keywordtype">id</span>) != <span class="keyword">null</span>) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            System.out.println(<span class="stringliteral">&quot;Error: ya existe un evento con ID &quot;</span> + <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html">EventoDTO</a> nuevoEvento = <span class="keyword">new</span> <a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html">EventoDTO</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        nuevoEvento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a262727a8795ba4b60e69cc05da40367e">setId</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        nuevoEvento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ad0afbc3a50f608d3965060dcb15a5828">setNombre</a>(titulo);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        nuevoEvento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a86aab7dc711fe28005efb1f895952546">setNumeroEntradas</a>(numeroEntradas);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        nuevoEvento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#abd9ab19b0f4780dff5ff94eff65f54fb">setFecha</a>(fecha);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        nuevoEvento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a2b907e06a92045ab21072cfd6ab9c2f0">setHora</a>(hora);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        nuevoEvento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a6c7898a22b8f69e2d5a9373de0107587">setUbicacion</a>(localizacion);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        String tipoFormateado = validarYFormatearTipo(tipoEvento);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span> (tipoFormateado == <span class="keyword">null</span>) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            System.out.println(</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    <span class="stringliteral">&quot;Tipo de evento no válido. Opciones válidas: Concierto, Festival, Obra de Teatro, Evento Deportivo.&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        nuevoEvento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ac3143c8ff0936c1e9b59af4aea10eaf7">setTipo</a>(tipoFormateado);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        eventoDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a8d153fe9be30fed05d720c7b9a7611b6">guardarEvento</a>(nuevoEvento);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        System.out.println(<span class="stringliteral">&quot;Evento creado: &quot;</span> + titulo);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1EventoController.html#afbd9238f341627c2b745d8690d1ddd2d">   74</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classmain_1_1java_1_1controller_1_1EventoController.html#afbd9238f341627c2b745d8690d1ddd2d">modificarEvento</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, String titulo, <span class="keywordtype">int</span> numeroEntradas,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            String localizacion, String tipoEvento, LocalDate fecha, LocalTime hora) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html">EventoDTO</a> existente = eventoDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a057519104f9318716e1ed64e866c0ac3">obtenerPorId</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">if</span> (existente == <span class="keyword">null</span>) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            System.out.println(<span class="stringliteral">&quot;No se encontró un evento con ID &quot;</span> + <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        existente.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ad0afbc3a50f608d3965060dcb15a5828">setNombre</a>(titulo);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        existente.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a86aab7dc711fe28005efb1f895952546">setNumeroEntradas</a>(numeroEntradas);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        existente.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#abd9ab19b0f4780dff5ff94eff65f54fb">setFecha</a>(fecha);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        existente.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a2b907e06a92045ab21072cfd6ab9c2f0">setHora</a>(hora);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        existente.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a6c7898a22b8f69e2d5a9373de0107587">setUbicacion</a>(localizacion);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        String tipoFormateado = validarYFormatearTipo(tipoEvento);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">if</span> (tipoFormateado == <span class="keyword">null</span>) {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            System.out.println(</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    <span class="stringliteral">&quot;Tipo de evento no válido. Opciones válidas: Concierto, Festival, Obra de Teatro, Evento Deportivo.&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        existente.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ac3143c8ff0936c1e9b59af4aea10eaf7">setTipo</a>(tipoFormateado);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        eventoDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a79ed7f05dbc2cacea44fb94bce7329ec">actualizarEvento</a>(existente);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1EventoController.html#aae102370aefb94231437ff1292f463d4">  107</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classmain_1_1java_1_1controller_1_1EventoController.html#aae102370aefb94231437ff1292f463d4">cancelarEvento</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordtype">boolean</span> eliminado = eventoDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#afa4eb178b9da845ce40f80249e477d83">eliminarEvento</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">if</span> (eliminado) {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            System.out.println(<span class="stringliteral">&quot;Evento con ID &quot;</span> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot; eliminado correctamente.&quot;</span>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            System.out.println(<span class="stringliteral">&quot;Error: no se encontró el evento con ID &quot;</span> + <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1EventoController.html#a69937a9df4f8a6d6779539b0f668e7ad">  124</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classmain_1_1java_1_1controller_1_1EventoController.html#a69937a9df4f8a6d6779539b0f668e7ad">obtenerEvento</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html">EventoDTO</a> evento = eventoDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a057519104f9318716e1ed64e866c0ac3">obtenerPorId</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordflow">if</span> (evento != <span class="keyword">null</span>) {</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            System.out.println(<span class="stringliteral">&quot;Evento encontrado:&quot;</span>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            System.out.println(<span class="stringliteral">&quot;Nombre: &quot;</span> + evento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#abb2e06b2e872259f9b4f4b28cb63098a">getNombre</a>());</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            System.out.println(<span class="stringliteral">&quot;Fecha: &quot;</span> + evento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ab294c576f7bef148e260583d77b3176a">getFecha</a>() + <span class="stringliteral">&quot; Hora: &quot;</span> + evento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ac4751016b15e5dd335a4d7576baf8560">getHora</a>());</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            System.out.println(<span class="stringliteral">&quot;Ubicación: &quot;</span> + evento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a992a80b2742a93e775f5271e907b2ab0">getUbicacion</a>());</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            System.out.println(<span class="stringliteral">&quot;Tipo: &quot;</span> + evento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ab0d092c869ca8a2251c3f660c44bf683">getTipo</a>());</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            System.out.println(<span class="stringliteral">&quot;Entradas: &quot;</span> + evento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a0477b3e9cec70a51f9ee9fb07d5e8ae9">getNumeroEntradas</a>());</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            System.out.println(<span class="stringliteral">&quot;Evento no encontrado con ID: &quot;</span> + <span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        }</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1EventoController.html#a2f31e2767774e802f0c6ffbcc4ae3627">  143</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classmain_1_1java_1_1controller_1_1EventoController.html#a2f31e2767774e802f0c6ffbcc4ae3627">listarEventos</a>() {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        List&lt;EventoDTO&gt; eventos = eventoDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a4108a6eb6dd04f3225b4cd0fb0fb3bae">obtenerTodos</a>();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">if</span> (eventos.isEmpty()) {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            System.out.println(<span class="stringliteral">&quot;No hay eventos registrados.&quot;</span>);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            System.out.println(<span class="stringliteral">&quot;Eventos disponibles:&quot;</span>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html">EventoDTO</a> evento : eventos) {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                System.out.println(<span class="stringliteral">&quot;- [&quot;</span> + evento.getId() + <span class="stringliteral">&quot;] &quot;</span> + evento.getNombre()</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                        + <span class="stringliteral">&quot; (&quot;</span> + evento.getTipo() + <span class="stringliteral">&quot;) - &quot;</span> + evento.getFecha() + <span class="stringliteral">&quot; &quot;</span> + evento.getHora());</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String[][] TIPOS_VALIDOS = {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            { <span class="stringliteral">&quot;concierto&quot;</span>, <span class="stringliteral">&quot;Concierto&quot;</span> },</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            { <span class="stringliteral">&quot;festival&quot;</span>, <span class="stringliteral">&quot;Festival&quot;</span> },</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            { <span class="stringliteral">&quot;obra de teatro&quot;</span>, <span class="stringliteral">&quot;Obra de Teatro&quot;</span> },</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            { <span class="stringliteral">&quot;evento deportivo&quot;</span>, <span class="stringliteral">&quot;Evento Deportivo&quot;</span> }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    };</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keyword">private</span> String validarYFormatearTipo(String tipoUsuario) {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        String tipoNormalizado = tipoUsuario.trim().toLowerCase();</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">for</span> (String[] tipo : TIPOS_VALIDOS) {</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">if</span> (tipo[0].equals(tipoNormalizado)) {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                <span class="keywordflow">return</span> tipo[1];</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            }</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1EventoController.html#a7e50c83da645febfa05e3d6da18805c4">  179</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classmain_1_1java_1_1controller_1_1EventoController.html#a7e50c83da645febfa05e3d6da18805c4">existeEvento</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">return</span> eventoDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a057519104f9318716e1ed64e866c0ac3">obtenerPorId</a>(<span class="keywordtype">id</span>) != <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="classmain_1_1java_1_1controller_1_1EventoController.html#af299049ffe69012cc73ea42e128eec98">  189</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code" href="classmain_1_1java_1_1controller_1_1EventoController.html#af299049ffe69012cc73ea42e128eec98">imprimirEventoPorId</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html">EventoDTO</a> evento = eventoDAO.<a class="code" href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a057519104f9318716e1ed64e866c0ac3">obtenerPorId</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordflow">if</span> (evento != <span class="keyword">null</span>) {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            System.out.println(<span class="stringliteral">&quot;\n----------Evento encontrado:---------\n&quot;</span>);</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            System.out.println(<span class="stringliteral">&quot;Nombre: &quot;</span> + evento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#abb2e06b2e872259f9b4f4b28cb63098a">getNombre</a>());</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            System.out.println(<span class="stringliteral">&quot;Fecha: &quot;</span> + evento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ab294c576f7bef148e260583d77b3176a">getFecha</a>() + <span class="stringliteral">&quot; Hora: &quot;</span> + evento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ac4751016b15e5dd335a4d7576baf8560">getHora</a>());</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            System.out.println(<span class="stringliteral">&quot;Ubicación: &quot;</span> + evento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a992a80b2742a93e775f5271e907b2ab0">getUbicacion</a>());</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            System.out.println(<span class="stringliteral">&quot;Tipo: &quot;</span> + evento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ab0d092c869ca8a2251c3f660c44bf683">getTipo</a>());</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            System.out.println(<span class="stringliteral">&quot;Entradas disponibles: &quot;</span> + evento.<a class="code" href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a0477b3e9cec70a51f9ee9fb07d5e8ae9">getNumeroEntradas</a>());</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            System.out.println(<span class="stringliteral">&quot;No se encontró un evento con el ID: &quot;</span> + <span class="keywordtype">id</span> + <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1EventoController_html"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1EventoController.html">main.java.controller.EventoController</a></div><div class="ttdef"><b>Definition:</b> <a href="EventoController_8java_source.html#l00010">EventoController.java:10</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1EventoController_html_a2f31e2767774e802f0c6ffbcc4ae3627"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1EventoController.html#a2f31e2767774e802f0c6ffbcc4ae3627">main.java.controller.EventoController.listarEventos</a></div><div class="ttdeci">void listarEventos()</div><div class="ttdoc">Lista todos los eventos disponibles.</div><div class="ttdef"><b>Definition:</b> <a href="EventoController_8java_source.html#l00143">EventoController.java:143</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1EventoController_html_a69937a9df4f8a6d6779539b0f668e7ad"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1EventoController.html#a69937a9df4f8a6d6779539b0f668e7ad">main.java.controller.EventoController.obtenerEvento</a></div><div class="ttdeci">boolean obtenerEvento(int id)</div><div class="ttdoc">Busca y muestra un evento por ID.</div><div class="ttdef"><b>Definition:</b> <a href="EventoController_8java_source.html#l00124">EventoController.java:124</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1EventoController_html_a7e50c83da645febfa05e3d6da18805c4"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1EventoController.html#a7e50c83da645febfa05e3d6da18805c4">main.java.controller.EventoController.existeEvento</a></div><div class="ttdeci">boolean existeEvento(int id)</div><div class="ttdoc">Verifica si existe un evento con el ID especificado.</div><div class="ttdef"><b>Definition:</b> <a href="EventoController_8java_source.html#l00179">EventoController.java:179</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1EventoController_html_aab448dbfe0df72202e96b911d1559556"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1EventoController.html#aab448dbfe0df72202e96b911d1559556">main.java.controller.EventoController.crearEvento</a></div><div class="ttdeci">boolean crearEvento(String titulo, int id, int numeroEntradas, String localizacion, String tipoEvento, LocalDate fecha, LocalTime hora)</div><div class="ttdoc">Crea un nuevo evento si no existe un evento con el mismo ID.</div><div class="ttdef"><b>Definition:</b> <a href="EventoController_8java_source.html#l00034">EventoController.java:34</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1EventoController_html_aae102370aefb94231437ff1292f463d4"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1EventoController.html#aae102370aefb94231437ff1292f463d4">main.java.controller.EventoController.cancelarEvento</a></div><div class="ttdeci">boolean cancelarEvento(int id)</div><div class="ttdoc">Elimina un evento si existe por su ID.</div><div class="ttdef"><b>Definition:</b> <a href="EventoController_8java_source.html#l00107">EventoController.java:107</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1EventoController_html_aaeeac25ec93730ecea6a1c9cc2ec61ee"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1EventoController.html#aaeeac25ec93730ecea6a1c9cc2ec61ee">main.java.controller.EventoController.EventoController</a></div><div class="ttdeci">EventoController()</div><div class="ttdoc">Constructor que inicializa el DAO de eventos.</div><div class="ttdef"><b>Definition:</b> <a href="EventoController_8java_source.html#l00017">EventoController.java:17</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1EventoController_html_af299049ffe69012cc73ea42e128eec98"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1EventoController.html#af299049ffe69012cc73ea42e128eec98">main.java.controller.EventoController.imprimirEventoPorId</a></div><div class="ttdeci">boolean imprimirEventoPorId(int id)</div><div class="ttdoc">Busca y muestra por consola los datos de un evento según su ID.</div><div class="ttdef"><b>Definition:</b> <a href="EventoController_8java_source.html#l00189">EventoController.java:189</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1controller_1_1EventoController_html_afbd9238f341627c2b745d8690d1ddd2d"><div class="ttname"><a href="classmain_1_1java_1_1controller_1_1EventoController.html#afbd9238f341627c2b745d8690d1ddd2d">main.java.controller.EventoController.modificarEvento</a></div><div class="ttdeci">boolean modificarEvento(int id, String titulo, int numeroEntradas, String localizacion, String tipoEvento, LocalDate fecha, LocalTime hora)</div><div class="ttdoc">Modifica un evento existente si se encuentra por ID.</div><div class="ttdef"><b>Definition:</b> <a href="EventoController_8java_source.html#l00074">EventoController.java:74</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dao_1_1EventoDAO_html"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html">main.java.data.dao.EventoDAO</a></div><div class="ttdoc">Clase DAO (Data Access Object) para manejar operaciones de lectura y escritura de eventos en un archi...</div><div class="ttdef"><b>Definition:</b> <a href="EventoDAO_8java_source.html#l00017">EventoDAO.java:17</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dao_1_1EventoDAO_html_a057519104f9318716e1ed64e866c0ac3"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a057519104f9318716e1ed64e866c0ac3">main.java.data.dao.EventoDAO.obtenerPorId</a></div><div class="ttdeci">EventoDTO obtenerPorId(int id)</div><div class="ttdoc">Busca y devuelve un evento según su identificador único.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDAO_8java_source.html#l00068">EventoDAO.java:68</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dao_1_1EventoDAO_html_a4108a6eb6dd04f3225b4cd0fb0fb3bae"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a4108a6eb6dd04f3225b4cd0fb0fb3bae">main.java.data.dao.EventoDAO.obtenerTodos</a></div><div class="ttdeci">List&lt; EventoDTO &gt; obtenerTodos()</div><div class="ttdoc">Lee todos los eventos del archivo y los devuelve como una lista de objetos EventoDTO.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDAO_8java_source.html#l00027">EventoDAO.java:27</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dao_1_1EventoDAO_html_a79ed7f05dbc2cacea44fb94bce7329ec"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a79ed7f05dbc2cacea44fb94bce7329ec">main.java.data.dao.EventoDAO.actualizarEvento</a></div><div class="ttdeci">void actualizarEvento(EventoDTO eventoActualizado)</div><div class="ttdoc">Actualiza un evento existente (por ID) en el archivo.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDAO_8java_source.html#l00096">EventoDAO.java:96</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dao_1_1EventoDAO_html_a8d153fe9be30fed05d720c7b9a7611b6"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a8d153fe9be30fed05d720c7b9a7611b6">main.java.data.dao.EventoDAO.guardarEvento</a></div><div class="ttdeci">void guardarEvento(EventoDTO nuevoEvento)</div><div class="ttdoc">Guarda un nuevo evento añadiéndolo al final del archivo.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDAO_8java_source.html#l00081">EventoDAO.java:81</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dao_1_1EventoDAO_html_afa4eb178b9da845ce40f80249e477d83"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#afa4eb178b9da845ce40f80249e477d83">main.java.data.dao.EventoDAO.eliminarEvento</a></div><div class="ttdeci">boolean eliminarEvento(int id)</div><div class="ttdoc">Elimina un evento del archivo según su ID.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDAO_8java_source.html#l00121">EventoDAO.java:121</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dto_1_1EventoDTO_html"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html">main.java.data.dto.EventoDTO</a></div><div class="ttdoc">Clase DTO (Data Transfer Object) que representa un evento.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDTO_8java_source.html#l00011">EventoDTO.java:11</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dto_1_1EventoDTO_html_a0477b3e9cec70a51f9ee9fb07d5e8ae9"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a0477b3e9cec70a51f9ee9fb07d5e8ae9">main.java.data.dto.EventoDTO.getNumeroEntradas</a></div><div class="ttdeci">int getNumeroEntradas()</div><div class="ttdoc">Obtiene el número de entradas disponibles para el evento.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDTO_8java_source.html#l00058">EventoDTO.java:58</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dto_1_1EventoDTO_html_a262727a8795ba4b60e69cc05da40367e"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a262727a8795ba4b60e69cc05da40367e">main.java.data.dto.EventoDTO.setId</a></div><div class="ttdeci">void setId(int id)</div><div class="ttdoc">Establece el ID del evento.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDTO_8java_source.html#l00037">EventoDTO.java:37</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dto_1_1EventoDTO_html_a2b907e06a92045ab21072cfd6ab9c2f0"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a2b907e06a92045ab21072cfd6ab9c2f0">main.java.data.dto.EventoDTO.setHora</a></div><div class="ttdeci">void setHora(LocalTime hora)</div><div class="ttdoc">Establece la hora del evento.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDTO_8java_source.html#l00093">EventoDTO.java:93</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dto_1_1EventoDTO_html_a6c7898a22b8f69e2d5a9373de0107587"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a6c7898a22b8f69e2d5a9373de0107587">main.java.data.dto.EventoDTO.setUbicacion</a></div><div class="ttdeci">void setUbicacion(String ubicacion)</div><div class="ttdoc">Establece la ubicación del evento.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDTO_8java_source.html#l00107">EventoDTO.java:107</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dto_1_1EventoDTO_html_a86aab7dc711fe28005efb1f895952546"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a86aab7dc711fe28005efb1f895952546">main.java.data.dto.EventoDTO.setNumeroEntradas</a></div><div class="ttdeci">void setNumeroEntradas(int numeroEntradas)</div><div class="ttdoc">Establece el número de entradas disponibles para el evento.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDTO_8java_source.html#l00065">EventoDTO.java:65</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dto_1_1EventoDTO_html_a992a80b2742a93e775f5271e907b2ab0"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#a992a80b2742a93e775f5271e907b2ab0">main.java.data.dto.EventoDTO.getUbicacion</a></div><div class="ttdeci">String getUbicacion()</div><div class="ttdoc">Obtiene la ubicación del evento.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDTO_8java_source.html#l00100">EventoDTO.java:100</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dto_1_1EventoDTO_html_ab0d092c869ca8a2251c3f660c44bf683"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ab0d092c869ca8a2251c3f660c44bf683">main.java.data.dto.EventoDTO.getTipo</a></div><div class="ttdeci">String getTipo()</div><div class="ttdoc">Obtiene el tipo del evento.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDTO_8java_source.html#l00114">EventoDTO.java:114</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dto_1_1EventoDTO_html_ab294c576f7bef148e260583d77b3176a"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ab294c576f7bef148e260583d77b3176a">main.java.data.dto.EventoDTO.getFecha</a></div><div class="ttdeci">LocalDate getFecha()</div><div class="ttdoc">Obtiene la fecha del evento.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDTO_8java_source.html#l00072">EventoDTO.java:72</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dto_1_1EventoDTO_html_abb2e06b2e872259f9b4f4b28cb63098a"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#abb2e06b2e872259f9b4f4b28cb63098a">main.java.data.dto.EventoDTO.getNombre</a></div><div class="ttdeci">String getNombre()</div><div class="ttdoc">Obtiene el nombre del evento.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDTO_8java_source.html#l00044">EventoDTO.java:44</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dto_1_1EventoDTO_html_abd9ab19b0f4780dff5ff94eff65f54fb"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#abd9ab19b0f4780dff5ff94eff65f54fb">main.java.data.dto.EventoDTO.setFecha</a></div><div class="ttdeci">void setFecha(LocalDate fecha)</div><div class="ttdoc">Establece la fecha del evento.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDTO_8java_source.html#l00079">EventoDTO.java:79</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dto_1_1EventoDTO_html_ac3143c8ff0936c1e9b59af4aea10eaf7"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ac3143c8ff0936c1e9b59af4aea10eaf7">main.java.data.dto.EventoDTO.setTipo</a></div><div class="ttdeci">void setTipo(String tipo)</div><div class="ttdoc">Establece el tipo del evento.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDTO_8java_source.html#l00121">EventoDTO.java:121</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dto_1_1EventoDTO_html_ac4751016b15e5dd335a4d7576baf8560"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ac4751016b15e5dd335a4d7576baf8560">main.java.data.dto.EventoDTO.getHora</a></div><div class="ttdeci">LocalTime getHora()</div><div class="ttdoc">Obtiene la hora del evento.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDTO_8java_source.html#l00086">EventoDTO.java:86</a></div></div>
+<div class="ttc" id="aclassmain_1_1java_1_1data_1_1dto_1_1EventoDTO_html_ad0afbc3a50f608d3965060dcb15a5828"><div class="ttname"><a href="classmain_1_1java_1_1data_1_1dto_1_1EventoDTO.html#ad0afbc3a50f608d3965060dcb15a5828">main.java.data.dto.EventoDTO.setNombre</a></div><div class="ttdeci">void setNombre(String nombre)</div><div class="ttdoc">Establece el nombre del evento.</div><div class="ttdef"><b>Definition:</b> <a href="EventoDTO_8java_source.html#l00051">EventoDTO.java:51</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a class="el" href="dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a class="el" href="dir_750e0732a4faa2f7034aa060c7582428.html">controller</a></li><li class="navelem"><a class="el" href="EventoController_8java.html">EventoController.java</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

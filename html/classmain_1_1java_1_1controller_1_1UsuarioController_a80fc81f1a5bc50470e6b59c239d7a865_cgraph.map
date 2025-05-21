@@ -1,0 +1,16 @@
+<map id="main.java.controller.UsuarioController.registrarUsuario" name="main.java.controller.UsuarioController.registrarUsuario">
+<area shape="rect" id="node1" title="Método para registrar un nuevo usuario." alt="" coords="5,195,212,236"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a27fabd0722f8e67d54cc584d011b3b0f" title="Busca un usuario por su dirección de correo electrónico." alt="" coords="260,71,472,112"/>
+<area shape="rect" id="node4" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a88d88b0fbc024045ea769aad078c3971" title=" " alt="" coords="265,5,467,47"/>
+<area shape="rect" id="node5" href="$classmain_1_1java_1_1model_1_1Usuario.html#ad5652e089e31c8e4d66f6832a9eeb165" title="Valida si un DNI tiene el formato correcto (8 dígitos seguidos de una letra mayúscula)." alt="" coords="263,136,469,177"/>
+<area shape="rect" id="node6" href="$classmain_1_1java_1_1model_1_1Usuario.html#ad233ff6ee251312bc75ae18736b65e4a" title="Obtiene el correo electrónico del usuario." alt="" coords="534,187,745,228"/>
+<area shape="rect" id="node7" href="$classmain_1_1java_1_1model_1_1Usuario.html#af34d1d44e22521273db2067d61c556e1" title="Obtiene el DNI del usuario." alt="" coords="523,253,756,279"/>
+<area shape="rect" id="node8" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a251aa3bbf43b389024e8d973a9da280f" title="Guarda un nuevo usuario en el archivo." alt="" coords="265,304,467,345"/>
+<area shape="rect" id="node14" href="$classmain_1_1java_1_1model_1_1Usuario.html#adfb444646acf9e8b6c7b59028a2520e4" title="Representación en cadena del objeto Usuario." alt="" coords="265,369,467,411"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#ab31282acb5c8cd23ad38399ac4be3871" title="Obtiene todos los usuarios almacenados en el archivo." alt="" coords="538,37,741,79"/>
+<area shape="rect" id="node9" href="$classmain_1_1java_1_1model_1_1Usuario.html#aa5654a2e0e86499f5ea2b2149074396c" title="Obtiene el apellido del usuario." alt="" coords="534,552,745,593"/>
+<area shape="rect" id="node10" href="$classmain_1_1java_1_1model_1_1Usuario.html#aa992088547c2804b22ff7e9378d30aac" title="Obtiene el saldo en la cartera del usuario." alt="" coords="534,304,745,345"/>
+<area shape="rect" id="node11" href="$classmain_1_1java_1_1model_1_1Usuario.html#a91801a0fd53feae645c7e3518e8fbe33" title="Obtiene la contraseña del usuario." alt="" coords="534,369,745,411"/>
+<area shape="rect" id="node12" href="$classmain_1_1java_1_1model_1_1Usuario.html#ac3424593fb4791badbcefc239b1ea7d5" title="Obtiene el nombre del usuario." alt="" coords="534,435,745,476"/>
+<area shape="rect" id="node13" href="$classmain_1_1java_1_1model_1_1Usuario.html#abd14a08d49811da2505efff9a4ee503c" title="Obtiene el tipo de usuario." alt="" coords="520,501,759,527"/>
+</map>

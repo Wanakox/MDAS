@@ -1,0 +1,5 @@
+<map id="main.java.model.Entrada.getPoseedor" name="main.java.model.Entrada.getPoseedor">
+<area shape="rect" id="node1" title="Obtiene el nombre del poseedor de la entrada." alt="" coords="256,39,467,80"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1data_1_1dao_1_1EntradaDAO.html#aff39a46c5a62a301bf87781d44bc6163" title="Actualiza los datos de una entrada existente." alt="" coords="5,5,208,47"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1data_1_1dao_1_1EntradaDAO.html#aa0400ef56598edc524703c9e756f26ef" title="Crea una nueva entrada y la agrega al archivo." alt="" coords="5,71,208,112"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="main.java.controller.PagoController.procesarPago" name="main.java.controller.PagoController.procesarPago">
+<area shape="rect" id="node1" title="Método para procesar un pago y descontar el saldo del usuario." alt="" coords="5,104,192,145"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1data_1_1dao_1_1EntradaDAO.html#a4a181529e15a537984eedf060241e973" title="Comprueba si existe una entrada con un nombre de usuario y una cantidad específica." alt="" coords="245,5,448,47"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a4a6697f3e3998f0f974882db7187a6ef" title="Obtiene el nombre de un usuario a partir de su correo electrónico." alt="" coords="240,71,453,112"/>
+<area shape="rect" id="node4" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a01d8e9192b4508d15d5bd57617ddcf7b" title="Modifica el saldo de un usuario identificado por su correo." alt="" coords="245,136,448,177"/>
+<area shape="rect" id="node5" href="$classmain_1_1java_1_1data_1_1dao_1_1UsuarioDAO.html#a8c00a7b955e903b11526596a49be23d6" title="Obtiene el saldo actual de un usuario a partir de su correo electrónico." alt="" coords="245,201,448,243"/>
+</map>

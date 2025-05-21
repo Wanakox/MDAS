@@ -1,0 +1,14 @@
+<map id="main.java.data.dto.EventoDTO.setTipo" name="main.java.data.dto.EventoDTO.setTipo">
+<area shape="rect" id="node1" title="Establece el tipo del evento." alt="" coords="771,169,965,211"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1controller_1_1EventoController.html#aab448dbfe0df72202e96b911d1559556" title="Crea un nuevo evento si no existe un evento con el mismo ID." alt="" coords="16,5,217,47"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1controller_1_1EventoController.html#afbd9238f341627c2b745d8690d1ddd2d" title="Modifica un evento existente si se encuentra por ID." alt="" coords="16,332,217,373"/>
+<area shape="rect" id="node4" href="$classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a4108a6eb6dd04f3225b4cd0fb0fb3bae" title="Lee todos los eventos del archivo y los devuelve como una lista de objetos EventoDTO." alt="" coords="525,169,723,211"/>
+<area shape="rect" id="node5" href="$classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a79ed7f05dbc2cacea44fb94bce7329ec" title="Actualiza un evento existente (por ID) en el archivo." alt="" coords="278,268,475,309"/>
+<area shape="rect" id="node6" href="$classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#afa4eb178b9da845ce40f80249e477d83" title="Elimina un evento del archivo según su ID." alt="" coords="278,71,475,112"/>
+<area shape="rect" id="node8" href="$classmain_1_1java_1_1controller_1_1EventoController.html#a2f31e2767774e802f0c6ffbcc4ae3627" title="Lista todos los eventos disponibles." alt="" coords="276,136,477,177"/>
+<area shape="rect" id="node9" href="$classmain_1_1java_1_1data_1_1dao_1_1EventoDAO.html#a057519104f9318716e1ed64e866c0ac3" title="Busca y devuelve un evento según su identificador único." alt="" coords="278,201,475,243"/>
+<area shape="rect" id="node7" href="$classmain_1_1java_1_1controller_1_1EventoController.html#aae102370aefb94231437ff1292f463d4" title="Elimina un evento si existe por su ID." alt="" coords="16,71,217,112"/>
+<area shape="rect" id="node10" href="$classmain_1_1java_1_1controller_1_1EventoController.html#a7e50c83da645febfa05e3d6da18805c4" title="Verifica si existe un evento con el ID especificado." alt="" coords="16,201,217,243"/>
+<area shape="rect" id="node11" href="$classmain_1_1java_1_1controller_1_1EventoController.html#af299049ffe69012cc73ea42e128eec98" title="Busca y muestra por consola los datos de un evento según su ID." alt="" coords="5,267,228,308"/>
+<area shape="rect" id="node12" href="$classmain_1_1java_1_1controller_1_1EventoController.html#a69937a9df4f8a6d6779539b0f668e7ad" title="Busca y muestra un evento por ID." alt="" coords="16,136,217,177"/>
+</map>

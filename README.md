@@ -119,6 +119,8 @@ Para una descripción más detallada del proyecto, arquitectura y flujo de traba
 
 Además, el documento `Enunciado_Problema.pdf` describe el planteamiento original y los requisitos funcionales del sistema.
 
+### Documentación del código
+Para poder ver todos los comentarios de nuestro código podemos acceder al directorio html para poder ejecutar el index.html y ver el doxygen.
 ---
 
 ## 🛠️ Arquitectura y diseño

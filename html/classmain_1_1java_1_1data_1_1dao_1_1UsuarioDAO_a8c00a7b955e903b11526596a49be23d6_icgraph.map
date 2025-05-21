@@ -1,0 +1,5 @@
+<map id="main.java.data.dao.UsuarioDAO.obtenerSaldo" name="main.java.data.dao.UsuarioDAO.obtenerSaldo">
+<area shape="rect" id="node1" title="Obtiene el saldo actual de un usuario a partir de su correo electrónico." alt="" coords="248,39,451,80"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1controller_1_1PagoController.html#a9a760a806813a2a79ccb64d4cfea443e" title="Método para procesar un pago y descontar el saldo del usuario." alt="" coords="9,5,196,47"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1controller_1_1PagoController.html#a2dee10fb310fb7fde44ddb9db35b96ab" title="Método para recargar la cartera de un usuario." alt="" coords="5,71,200,112"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="main.java.data.dao.EntradaDAO.buscarPorPoseedor" name="main.java.data.dao.EntradaDAO.buscarPorPoseedor">
+<area shape="rect" id="node1" title="Busca todas las entradas asociadas a un poseedor." alt="" coords="324,5,527,47"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1controller_1_1EntradaController.html#a08cf874506b11df1b4bba05e8e027232" title="Método para imprimir todas las entradas asociadas a un usuario." alt="" coords="5,5,276,47"/>
+</map>

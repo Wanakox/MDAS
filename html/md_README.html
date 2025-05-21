@@ -1,0 +1,295 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MDAS - Eventos: 🎟️ MDAS - Sistema de Gestión de Eventos y Entradas</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MDAS - Eventos
+   </div>
+   <div id="projectbrief">Gestor de eventos deportivos o festivales donde se puede gestionar entradas, usuarios y eventos.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('md_README.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">🎟️ MDAS - Sistema de Gestión de Eventos y Entradas </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Este proyecto es una aplicación de consola desarrollada en Java para la <b>gestión de eventos</b>, compra de entradas, valoraciones y gestión de pagos y reembolsos. La persistencia de datos se realiza mediante archivos de texto planos y se sigue una arquitectura basada en <b>MVC + DAO + DTO</b>.</p>
+<p>Enlace al repositorio público creado para la práctica: <a href="https://github.com/Wanakox/MDAS">https://github.com/Wanakox/MDAS</a></p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md2"></a>
+📌 Características principales</h1>
+<ul>
+<li>Registro e inicio de sesión de usuarios✅</li>
+<li>Visualización y gestión de eventos✅</li>
+<li>Compra y gestión de entradas</li>
+<li>Valoración de eventos</li>
+<li>Solicitud y gestión de reembolsos</li>
+<li>Menú interactivo por consola ✅</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md4"></a>
+🗂️ Estructura del proyecto</h1>
+<div class="fragment"><div class="line">├── documentation.pdf                   # Documento explicativo de la práctica 1</div>
+<div class="line">├── Enunciado_Problema.pdf              # Enunciado del problema o caso de estudio</div>
+<div class="line">├── out                                 # Carpeta de salida (generada por el compilador)</div>
+<div class="line">├── README.md                           # Archivo de documentación del proyecto</div>
+<div class="line">├── start.sh                            # Script para compilar o ejecutar el proyecto</div>
+<div class="line">├── src</div>
+<div class="line">│   └── main</div>
+<div class="line">│       ├── app</div>
+<div class="line">│       │   └── Main.java               # Clase principal del proyecto (punto de entrada)</div>
+<div class="line">│       ├── java</div>
+<div class="line">│       │   ├── controller              # Controladores para manejar la lógica de negocio</div>
+<div class="line">│       │   │   ├── EntradaController.java</div>
+<div class="line">│       │   │   ├── EventoController.java</div>
+<div class="line">│       │   │   ├── PagoController.java</div>
+<div class="line">│       │   │   ├── ReembolsoController.java</div>
+<div class="line">│       │   │   ├── UsuarioController.java</div>
+<div class="line">│       │   │   └── ValoracionController.java</div>
+<div class="line">│       │   ├── data</div>
+<div class="line">│       │   │   ├── dao                 # Clases DAO para acceso a datos</div>
+<div class="line">│       │   │   │   ├── EntradaDAO.java</div>
+<div class="line">│       │   │   │   ├── EventoDAO.java</div>
+<div class="line">│       │   │   │   ├── PagoDAO.java</div>
+<div class="line">│       │   │   │   ├── ReembolsoDAO.java</div>
+<div class="line">│       │   │   │   ├── UsuarioDAO.java</div>
+<div class="line">│       │   │   │   └── ValoracionDAO.java</div>
+<div class="line">│       │   │   └── dto                 # Objetos de transferencia de datos (DTOs)</div>
+<div class="line">│       │   │       ├── EntradaDTO.java</div>
+<div class="line">│       │   │       ├── EventoDTO.java</div>
+<div class="line">│       │   │       ├── PagoDTO.java</div>
+<div class="line">│       │   │       ├── ReembolsoDTO.java</div>
+<div class="line">│       │   │       ├── UsuarioDTO.java</div>
+<div class="line">│       │   │       └── ValoracionDTO.java</div>
+<div class="line">│       │   ├── model                   # Clases del modelo de dominio</div>
+<div class="line">│       │   │   ├── Entrada.java</div>
+<div class="line">│       │   │   ├── Evento.java</div>
+<div class="line">│       │   │   ├── Pago.java</div>
+<div class="line">│       │   │   ├── Reembolso.java</div>
+<div class="line">│       │   │   ├── Usuario.java</div>
+<div class="line">│       │   │   ├── UsuarioNormal.java</div>
+<div class="line">│       │   │   ├── UsuarioOrganizador.java</div>
+<div class="line">│       │   │   ├── UsuarioSoporte.java</div>
+<div class="line">│       │   │   └── Valoracion.java</div>
+<div class="line">│       │   └── patterns                # Patrones de diseño utilizados en el proyecto</div>
+<div class="line">│       │       ├── builder</div>
+<div class="line">│       │       │   └── DirectorEvento.java</div>
+<div class="line">│       │       └── factory</div>
+<div class="line">│       │           ├── TipoUsuario.java</div>
+<div class="line">│       │           └── UsuarioFactory.java</div>
+<div class="line">│       └── resources                   # Archivos de datos utilizados por el sistema</div>
+<div class="line">│           ├── entrada.txt</div>
+<div class="line">│           ├── evento.txt</div>
+<div class="line">│           ├── pago.txt</div>
+<div class="line">│           └── usuarios.txt</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md5"></a>
+⚙️ Uso</h1>
+<p>Al ejecutar el script <code>./start.sh</code> dentro de la carpeta <code>/MDAS</code>, el sistema compilará el proyecto y desplegará un menú interactivo en consola, donde podrás:</p>
+<ul>
+<li>Acceder al registro, inicio de sesión o listar todos los usuarios.</li>
+<li>Menú de usuario: ver eventos disponibles, comprar entradas (TODO), comprar entradas de otro usuario (TODO), ver entradas compradas.</li>
+<li>Menú de soporte: listo para futuras implementaciones</li>
+<li>Menú de organizador: crear evento, editar evento, ver eventos, buscar evento por ID, cancelar evento.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Usuarios disponibles para poder acceder al sistema</h2>
+<p>En esta parte vas a poder encontrar los diferentes posibles menús de nuestra aplicación</p>
+<h3><a class="anchor" id="autotoc_md7"></a>
+Organizador</h3>
+<p>Correo: <a href="#" onclick="location.href='mai'+'lto:'+'123'+'4a'+'lbe'+'r@'+'hot'+'ma'+'il.'+'co'+'m'; return false;">1234a<span style="display: none;">.nosp@m.</span>lber<span style="display: none;">.nosp@m.</span>@hotm<span style="display: none;">.nosp@m.</span>ail.<span style="display: none;">.nosp@m.</span>com</a> Contraseña:i22alberto </p>
+<h3><a class="anchor" id="autotoc_md8"></a>
+Soporte</h3>
+<p>Correo: <a href="#" onclick="location.href='mai'+'lto:'+'123'+'4a'+'nge'+'l@'+'hot'+'ma'+'il.'+'co'+'m'; return false;">1234a<span style="display: none;">.nosp@m.</span>ngel<span style="display: none;">.nosp@m.</span>@hotm<span style="display: none;">.nosp@m.</span>ail.<span style="display: none;">.nosp@m.</span>com</a> Contraseña: i22angel </p>
+<h3><a class="anchor" id="autotoc_md9"></a>
+Usuario</h3>
+<p>Correo:<a href="#" onclick="location.href='mai'+'lto:'+'123'+'4a'+'ito'+'r@'+'hot'+'ma'+'il.'+'co'+'m'; return false;">1234a<span style="display: none;">.nosp@m.</span>itor<span style="display: none;">.nosp@m.</span>@hotm<span style="display: none;">.nosp@m.</span>ail.<span style="display: none;">.nosp@m.</span>com</a> Contraseña:i22aitor</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md11"></a>
+📁 Archivos de datos</h1>
+<p>La aplicación utiliza archivos planos para la persistencia de datos, ubicados en la carpeta de recursos. Entre ellos se encuentran:</p>
+<ul>
+<li><code>entrada.txt</code> — Registra la información sobre las entradas vendidas.</li>
+<li><code>evento.txt</code> — Contiene los datos de los eventos deportivos disponibles.</li>
+<li><code>pago.txt</code> — Registra los pagos realizados por las entradas.</li>
+<li><code>usuarios.txt</code> — Almacena la información de los usuarios registrados.</li>
+</ul>
+<p>Estos archivos son leídos y actualizados por los DAOs para mantener la consistencia del sistema.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md13"></a>
+📄 Documentación</h1>
+<p>Para una descripción más detallada del proyecto, arquitectura y flujo de trabajo, revisa el archivo <code>documentation.pdf</code> incluido en la raíz del repositorio.</p>
+<p>Además, el documento <code>Enunciado_Problema.pdf</code> describe el planteamiento original y los requisitos funcionales del sistema.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md15"></a>
+🛠️ Arquitectura y diseño</h1>
+<p>El sistema está basado en una arquitectura modular con separación clara de responsabilidades siguiendo los patrones:</p>
+<ul>
+<li><b>MVC (Modelo-Vista-Controlador):</b> <br  />
+<ul>
+<li><em>Modelo:</em> Clases que representan las entidades del dominio (Usuario, Evento, Entrada, Pago, Reembolso, Valoración). <br  />
+</li>
+<li><em>Controlador:</em> Gestiona la lógica de negocio y la interacción con el usuario a través de la consola. <br  />
+</li>
+<li><em>Vista:</em> Implementada en la consola mediante menús interactivos.</li>
+</ul>
+</li>
+<li><b>DAO (Data Access Object):</b> Acceso y manipulación de datos desde los archivos de persistencia.</li>
+<li><b>DTO (Data Transfer Object):</b> Objetos utilizados para transferir datos entre capas del sistema sin exponer detalles internos.</li>
+<li><b>Patrones de diseño:</b> <br  />
+<ul>
+<li><em>Builder:</em> Para la creación flexible de eventos deportivos. <br  />
+</li>
+<li><em>Factory:</em> Para la creación de distintos tipos de usuarios según su rol. </li>
+</ul>
+</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md16"></a>
+- &lt;em&gt;Singleton:&lt;/em&gt; Para mantener la coherencia dentro de los ficheros</h1>
+<h1><a class="anchor" id="autotoc_md17"></a>
+Componentes implementados</h1>
+<p>En este apartado podremos ver la especificación de todos los componentes que hemos implementado y su correspondencia en los ficheros de nuestra práctica. Aquí también especificaremos los cambios que hemos realizado </p>
+<h2><a class="anchor" id="autotoc_md18"></a>
+Componentes de negocio</h2>
+<p>En esta parte vamos a implementar los componentes de negocio y vamos a explicar cada una de las partes correspondientes. </p>
+<h3><a class="anchor" id="autotoc_md19"></a>
+Componente 1: Evento</h3>
+<h4><a class="anchor" id="autotoc_md20"></a>
+Explicación y correspondencia con el código</h4>
+<p>En este componente encontramos uno de los componentes core que se encarga de recopilar todas las partes más importantes relacionadas con el evento. Por ello la correspondencia con los archivos es la siguiente: <code>evento.txt</code> (contiene toda la información de los eventos), <code>evento.java</code> (parte del modelo del evento con getters, setters y constructores), <code>eventoController</code>(recopila las principales funciones de control), <code>DAO y DTO</code> (para manejar los datos del fichero) </p>
+<h4><a class="anchor" id="autotoc_md21"></a>
+Cambios realizados</h4>
+<ul>
+<li>Se ha añadido el campo idEvento para poder identificar a cada una de los eventos que hemos ido creando. </li>
+</ul>
+<h3><a class="anchor" id="autotoc_md22"></a>
+Componente 2: Usuario</h3>
+<h4><a class="anchor" id="autotoc_md23"></a>
+Explicación y correspondencia con el código</h4>
+<p>En este componente vamos a tener el aspecto relacionado con el usuario que abarcaría con el inicio de sesión, registro, listar usuarios o realizar valoraciones. Este componente tiene mucha relación, con el componente del sistema de sesión. La correspondencia con los archivos es la siguiente: <code>usuarios.txt</code> (contiene toda la información de los usuarios), <code>usuario.java</code> (modelo del usuario con getters, setters y constructores), <code>usuarioController</code> (recopila las principales funciones de controlc, <code>DAO y DTO</code> (para manejar los datos del fichero)) </p>
+<h4><a class="anchor" id="autotoc_md24"></a>
+Cambios realizados</h4>
+<ul>
+<li>Añadidas todas las funciones relacionadas con el saldo porque fueron omitidas en la parte de diseño. </li>
+</ul>
+<h1><a class="anchor" id="autotoc_md25"></a>
+- Funciones para realizar diferentes busquedas con distintos parámetros</h1>
+<h2><a class="anchor" id="autotoc_md26"></a>
+Componentes del sistema</h2>
+<p>En este apartado vamos a pasar a hacer una especificación detallada de los diferentes componentes del sistema, explicando a su vez algunos de los cambios realizados. </p>
+<h3><a class="anchor" id="autotoc_md27"></a>
+Componente 1: Evento</h3>
+<h4><a class="anchor" id="autotoc_md28"></a>
+Explicación y correspondencia con el código</h4>
+<p>Dentro de este componente de sistema encontramos todas las partes relacionadas con el evento, en nuestro proyecto se encuentran las siguientes interfaces con sus correspondencias se encuentran dentro de estos ficheros: <code>evento.txt</code> (donde almacenan todos los datos), <code>evento.java</code> (modelo para obtener los getters, setters y constructor), <code>DAO y DTO</code> (acceden al fichero para poder acceder a todos los datos) , <code><a class="el" href="EventoController_8java.html">EventoController.java</a></code> (se encuentra toda la lógica de control)</p><ul>
+<li>ICrearEvento</li>
+<li>ICancelarEvento</li>
+<li>IEditarEvento</li>
+<li>IListarEvento </li>
+</ul>
+<h4><a class="anchor" id="autotoc_md29"></a>
+Cambios realizados</h4>
+<h3><a class="anchor" id="autotoc_md30"></a>
+Componente 2: Sesión</h3>
+<h4><a class="anchor" id="autotoc_md31"></a>
+Explicación y correspondencia con el código</h4>
+<p>Dentro de este componente podemos encontrar las partes que se relacionan con la sesión, haciendo uso del registro y del inicio de sesión. Por ello utilizan los siguientes ficheros dentro de nuestro código: <code>usuarios.txt</code> (donde almacena todos los datos del usuario), <code>usuarios.java</code> (modelo para obtener los getters, setters y constructor), <code>DAO y DTO</code> para poder acceder a todos los datos de nuestro fichero, <code><a class="el" href="UsuarioController_8java.html">UsuarioController.java</a></code> (se encuentra toda la lógica de control para iniciar o registrarse). \ Interfaces implementadas:</p><ul>
+<li>IInicioSesion</li>
+<li>IRegistro </li>
+</ul>
+<h3><a class="anchor" id="autotoc_md32"></a>
+Componente 3: Entrada</h3>
+<h4><a class="anchor" id="autotoc_md33"></a>
+Explicación y correspondencia con el código</h4>
+<p>Dentro de este componenete vamos a encontrar algunas de las partes que implementamos no hemos realizado un desarrollo completo porque nos dimos cuenta de que no era necesario, pero vemos oportuno escribir poner las partes que hemos realizado para aumentar nuestro trabajo. Los ficheros que utilizaremos son: <code>entrada.txt</code> (donde se almacena todos los datos de nuestras entradas), <code>entradas.java</code> (modelo para obtener los getters, setters y los constructores), <code>DAO y DTO</code> para acceder a todos los datos de nuestro fichero, <code><a class="el" href="EntradaController_8java.html">EntradaController.java</a></code> (encuentra toda la lógica de control para iniciar o registrarse). </p>
+<h4><a class="anchor" id="autotoc_md34"></a>
+Cambios realizados</h4>
+<ul>
+<li>Añadir el campo id a la entrada para poder identificarlo</li>
+<li>Añadir el campo idEvento a la entrada para relacionarla con el evento al que pertenece. </li>
+</ul>
+<h1><a class="anchor" id="autotoc_md35"></a>
+- Añadir el booleano dispReembolso para identificar cuando una entrada está disponible para su reembolso.</h1>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<map id="Representación gráfica de la clase" name="Representación gráfica de la clase">
+<area shape="rect" id="node1" href="$classmain_1_1java_1_1model_1_1Usuario.html" title="Representa un usuario del sistema con atributos personales, de autenticación y financieros." alt="" coords="5,56,192,83"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1model_1_1UsuarioNormal.html" title="Representa un usuario de tipo normal dentro del sistema." alt="" coords="255,5,490,32"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1model_1_1UsuarioOrganizador.html" title="Representa un usuario de tipo organizador dentro del sistema." alt="" coords="240,56,505,83"/>
+<area shape="rect" id="node4" href="$classmain_1_1java_1_1model_1_1UsuarioSoporte.html" title="Representa un usuario con rol de soporte dentro del sistema." alt="" coords="255,107,491,133"/>
+</map>

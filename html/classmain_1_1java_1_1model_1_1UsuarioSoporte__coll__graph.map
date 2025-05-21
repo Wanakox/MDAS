@@ -1,0 +1,4 @@
+<map id="main.java.model.UsuarioSoporte" name="main.java.model.UsuarioSoporte">
+<area shape="rect" id="node1" title="Representa un usuario con rol de soporte dentro del sistema." alt="" coords="5,80,241,107"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1model_1_1Usuario.html" title="Representa un usuario del sistema con atributos personales, de autenticación y financieros." alt="" coords="30,5,217,32"/>
+</map>

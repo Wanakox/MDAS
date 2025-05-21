@@ -1,0 +1,8 @@
+<map id="main.java.data.dao.EventoDAO.obtenerPorId" name="main.java.data.dao.EventoDAO.obtenerPorId">
+<area shape="rect" id="node1" title="Busca y devuelve un evento según su identificador único." alt="" coords="276,136,473,177"/>
+<area shape="rect" id="node2" href="$classmain_1_1java_1_1controller_1_1EventoController.html#aab448dbfe0df72202e96b911d1559556" title="Crea un nuevo evento si no existe un evento con el mismo ID." alt="" coords="16,5,217,47"/>
+<area shape="rect" id="node3" href="$classmain_1_1java_1_1controller_1_1EventoController.html#a7e50c83da645febfa05e3d6da18805c4" title="Verifica si existe un evento con el ID especificado." alt="" coords="16,71,217,112"/>
+<area shape="rect" id="node4" href="$classmain_1_1java_1_1controller_1_1EventoController.html#af299049ffe69012cc73ea42e128eec98" title="Busca y muestra por consola los datos de un evento según su ID." alt="" coords="5,136,228,177"/>
+<area shape="rect" id="node5" href="$classmain_1_1java_1_1controller_1_1EventoController.html#afbd9238f341627c2b745d8690d1ddd2d" title="Modifica un evento existente si se encuentra por ID." alt="" coords="16,201,217,243"/>
+<area shape="rect" id="node6" href="$classmain_1_1java_1_1controller_1_1EventoController.html#a69937a9df4f8a6d6779539b0f668e7ad" title="Busca y muestra un evento por ID." alt="" coords="16,267,217,308"/>
+</map>
