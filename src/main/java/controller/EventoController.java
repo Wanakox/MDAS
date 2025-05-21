@@ -20,14 +20,16 @@ public class EventoController {
 
     /**
      * Crea un nuevo evento si no existe un evento con el mismo ID.
-     * @param titulo Nombre del evento.
-     * @param id ID único del evento.
+     * 
+     * @param titulo         Nombre del evento.
+     * @param id             ID único del evento.
      * @param numeroEntradas Cantidad de entradas disponibles.
-     * @param localizacion Ubicación del evento.
-     * @param tipoEvento Tipo del evento (validado).
-     * @param fecha Fecha del evento.
-     * @param hora Hora del evento.
-     * @return true si se crea correctamente, false si ya existe o hay error en el tipo.
+     * @param localizacion   Ubicación del evento.
+     * @param tipoEvento     Tipo del evento (validado).
+     * @param fecha          Fecha del evento.
+     * @param hora           Hora del evento.
+     * @return true si se crea correctamente, false si ya existe o hay error en el
+     *         tipo.
      */
     public boolean crearEvento(String titulo, int id, int numeroEntradas,
             String localizacion, String tipoEvento, LocalDate fecha, LocalTime hora) {
@@ -58,17 +60,19 @@ public class EventoController {
 
     /**
      * Modifica un evento existente si se encuentra por ID.
-     * @param id ID del evento a modificar.
-     * @param titulo Nuevo nombre.
+     * 
+     * @param id             ID del evento a modificar.
+     * @param titulo         Nuevo nombre.
      * @param numeroEntradas Nueva cantidad de entradas.
-     * @param localizacion Nueva ubicación.
-     * @param tipoEvento Nuevo tipo de evento.
-     * @param fecha Nueva fecha.
-     * @param hora Nueva hora.
-     * @return true si se modifica correctamente, false si no se encuentra o tipo inválido.
+     * @param localizacion   Nueva ubicación.
+     * @param tipoEvento     Nuevo tipo de evento.
+     * @param fecha          Nueva fecha.
+     * @param hora           Nueva hora.
+     * @return true si se modifica correctamente, false si no se encuentra o tipo
+     *         inválido.
      */
     public boolean modificarEvento(int id, String titulo, int numeroEntradas,
-    String localizacion, String tipoEvento, LocalDate fecha, LocalTime hora) {
+            String localizacion, String tipoEvento, LocalDate fecha, LocalTime hora) {
 
         EventoDTO existente = eventoDAO.obtenerPorId(id);
         if (existente == null) {
@@ -84,18 +88,19 @@ public class EventoController {
 
         String tipoFormateado = validarYFormatearTipo(tipoEvento);
         if (tipoFormateado == null) {
-            System.out.println("Tipo de evento no válido. Opciones válidas: Concierto, Festival, Obra de Teatro, Evento Deportivo.");
+            System.out.println(
+                    "Tipo de evento no válido. Opciones válidas: Concierto, Festival, Obra de Teatro, Evento Deportivo.");
             return false;
         }
         existente.setTipo(tipoFormateado);
 
         eventoDAO.actualizarEvento(existente);
-        System.out.println("Evento actualizado: " + titulo);
         return true;
     }
 
     /**
      * Elimina un evento si existe por su ID.
+     * 
      * @param id ID del evento a eliminar.
      * @return true si se elimina correctamente, false si no se encuentra.
      */
@@ -112,6 +117,7 @@ public class EventoController {
 
     /**
      * Busca y muestra un evento por ID.
+     * 
      * @param id ID del evento a consultar.
      * @return true si se encuentra, false si no existe.
      */
@@ -165,14 +171,25 @@ public class EventoController {
     }
 
     /**
-     * Busca un evento por su ID y muestra su información si se encuentra.
-     * @param id El ID del evento a buscar.
-     * @return true si el evento se encuentra, false en caso contrario.
+     * Verifica si existe un evento con el ID especificado.
+     *
+     * @param id ID del evento a verificar.
+     * @return true si el evento existe, false en caso contrario.
      */
-    public boolean buscarEventoPorId(int id) {
+    public boolean existeEvento(int id) {
+        return eventoDAO.obtenerPorId(id) != null;
+    }
+
+    /**
+     * Busca y muestra por consola los datos de un evento según su ID.
+     *
+     * @param id ID del evento a consultar.
+     * @return true si el evento se encuentra y se imprime, false si no existe.
+     */
+    public boolean imprimirEventoPorId(int id) {
         EventoDTO evento = eventoDAO.obtenerPorId(id);
         if (evento != null) {
-            System.out.println("Evento encontrado:");
+            System.out.println("\n----------Evento encontrado:---------\n");
             System.out.println("Nombre: " + evento.getNombre());
             System.out.println("Fecha: " + evento.getFecha() + " Hora: " + evento.getHora());
             System.out.println("Ubicación: " + evento.getUbicacion());
@@ -180,8 +197,9 @@ public class EventoController {
             System.out.println("Entradas disponibles: " + evento.getNumeroEntradas());
             return true;
         } else {
-            System.out.println("No se encontró un evento con el ID: " + id);
+            System.out.println("No se encontró un evento con el ID: " + id + "\n");
             return false;
         }
     }
+
 }

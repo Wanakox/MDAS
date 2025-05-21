@@ -1,3 +1,6 @@
 id,nombre,númeroEntradas,fecha,hora,ubicación,tipo
-1,Concierto Rock,200,2025-06-21,20:00,Madrid,Concierto
-2,Rey Leon,120,1234-12-12,12:12,UCO,Concierto
+1,David Bowie,200,2025-06-21,20:00,Madrid,Concierto
+2,Coldplay,12,2025-10-10,12:00,Santiago Bernnabéu,Concierto
+3,Musical Rey Leo,200,2025-06-21,20:00,Madrid,Obra de Teatro
+
+4,Madrid - Pachuca,100,2025-06-25,00:00,lolalolitaland,Evento Deportivo
